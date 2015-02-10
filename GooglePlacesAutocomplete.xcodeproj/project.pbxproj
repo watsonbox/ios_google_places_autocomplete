@@ -13,6 +13,9 @@
 		1EC16D511A8A1E8500E0760A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EC16D501A8A1E8500E0760A /* Images.xcassets */; };
 		1EC16D541A8A1E8500E0760A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC16D521A8A1E8500E0760A /* LaunchScreen.xib */; };
 		1EC16D601A8A1E8500E0760A /* GooglePlacesAutocompleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC16D5F1A8A1E8500E0760A /* GooglePlacesAutocompleteTests.swift */; };
+		1EC16D6A1A8A1FCB00E0760A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC16D691A8A1FCB00E0760A /* Place.swift */; };
+		1EC16D6D1A8A20D200E0760A /* GooglePlacesAutocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC16D6B1A8A20D200E0760A /* GooglePlacesAutocomplete.swift */; };
+		1EC16D6E1A8A20D200E0760A /* GooglePlacesAutocomplete.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC16D6C1A8A20D200E0760A /* GooglePlacesAutocomplete.xib */; };
 		C78D857B046DD76BDCDF1149 /* Pods_GooglePlacesAutocomplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7759516CE934683C98B487D /* Pods_GooglePlacesAutocomplete.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,9 @@
 		1EC16D591A8A1E8500E0760A /* GooglePlacesAutocompleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooglePlacesAutocompleteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC16D5E1A8A1E8500E0760A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EC16D5F1A8A1E8500E0760A /* GooglePlacesAutocompleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesAutocompleteTests.swift; sourceTree = "<group>"; };
+		1EC16D691A8A1FCB00E0760A /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		1EC16D6B1A8A20D200E0760A /* GooglePlacesAutocomplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesAutocomplete.swift; sourceTree = "<group>"; };
+		1EC16D6C1A8A20D200E0760A /* GooglePlacesAutocomplete.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GooglePlacesAutocomplete.xib; sourceTree = "<group>"; };
 		A2901012111F811D079764A7 /* Pods-GooglePlacesAutocomplete.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesAutocomplete.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlacesAutocomplete/Pods-GooglePlacesAutocomplete.debug.xcconfig"; sourceTree = "<group>"; };
 		D4EB9188C76C47B4E1AECDC5 /* Pods-GooglePlacesAutocomplete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesAutocomplete.release.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlacesAutocomplete/Pods-GooglePlacesAutocomplete.release.xcconfig"; sourceTree = "<group>"; };
 		D7759516CE934683C98B487D /* Pods_GooglePlacesAutocomplete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooglePlacesAutocomplete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +94,9 @@
 			children = (
 				1EC16D491A8A1E8500E0760A /* AppDelegate.swift */,
 				1EC16D4B1A8A1E8500E0760A /* ViewController.swift */,
+				1EC16D691A8A1FCB00E0760A /* Place.swift */,
+				1EC16D6B1A8A20D200E0760A /* GooglePlacesAutocomplete.swift */,
+				1EC16D6C1A8A20D200E0760A /* GooglePlacesAutocomplete.xib */,
 				1EC16D4D1A8A1E8500E0760A /* Main.storyboard */,
 				1EC16D501A8A1E8500E0760A /* Images.xcassets */,
 				1EC16D521A8A1E8500E0760A /* LaunchScreen.xib */,
@@ -221,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC16D6E1A8A20D200E0760A /* GooglePlacesAutocomplete.xib in Resources */,
 				1EC16D4F1A8A1E8500E0760A /* Main.storyboard in Resources */,
 				1EC16D541A8A1E8500E0760A /* LaunchScreen.xib in Resources */,
 				1EC16D511A8A1E8500E0760A /* Images.xcassets in Resources */,
@@ -289,6 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC16D6D1A8A20D200E0760A /* GooglePlacesAutocomplete.swift in Sources */,
+				1EC16D6A1A8A1FCB00E0760A /* Place.swift in Sources */,
 				1EC16D4C1A8A1E8500E0760A /* ViewController.swift in Sources */,
 				1EC16D4A1A8A1E8500E0760A /* AppDelegate.swift in Sources */,
 			);

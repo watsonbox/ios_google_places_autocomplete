@@ -9,17 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    let gpaViewController = GooglePlacesAutocomplete(
+      apiKey: "[YOUR GOOGLE PLACES API KEY]",
+      placeType: .Address
+    )
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    presentViewController(gpaViewController, animated: false, completion: nil)
+  }
 }
-
