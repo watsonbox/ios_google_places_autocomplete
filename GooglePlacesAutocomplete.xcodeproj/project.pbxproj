@@ -63,7 +63,9 @@
 				1EC16D5C1A8A1E8500E0760A /* GooglePlacesAutocompleteTests */,
 				1EC16D451A8A1E8500E0760A /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		1EC16D451A8A1E8500E0760A /* Products */ = {
 			isa = PBXGroup;
