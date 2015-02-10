@@ -22,9 +22,36 @@
                         <outlet property="delegate" destination="-1" id="Eqi-Q5-bZb"/>
                     </connections>
                 </searchBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoweredByGoogle" translatesAutoresizingMaskIntoConstraints="NO" id="DsE-yN-ypR">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="GaF-og-gpE">
+                            <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="50" id="OLH-hh-9Jb">
+                            <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="GaF-og-gpE"/>
+                            <exclude reference="OLH-hh-9Jb"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="GaF-og-gpE"/>
+                            <include reference="OLH-hh-9Jb"/>
+                        </mask>
+                    </variation>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="centerX" secondItem="DsE-yN-ypR" secondAttribute="centerX" id="85d-fO-F1y"/>
+                <constraint firstAttribute="bottom" secondItem="DsE-yN-ypR" secondAttribute="bottom" constant="50" id="Pig-eC-kN6">
+                    <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                </constraint>
                 <constraint firstAttribute="trailing" secondItem="aW0-Kc-vur" secondAttribute="trailing" id="UYZ-aW-9O3"/>
                 <constraint firstItem="aW0-Kc-vur" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pkk-e1-Ts3"/>
                 <constraint firstItem="aW0-Kc-vur" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yc5-J8-Dbj">
@@ -37,23 +64,29 @@
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="aW0-Kc-vur"/>
+                    <exclude reference="DsE-yN-ypR"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="UYZ-aW-9O3"/>
                     <exclude reference="pkk-e1-Ts3"/>
                     <exclude reference="yc5-J8-Dbj"/>
                     <exclude reference="zl2-pl-J2C"/>
+                    <exclude reference="85d-fO-F1y"/>
+                    <exclude reference="Pig-eC-kN6"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="aW0-Kc-vur"/>
+                    <include reference="DsE-yN-ypR"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="UYZ-aW-9O3"/>
                     <include reference="pkk-e1-Ts3"/>
                     <include reference="yc5-J8-Dbj"/>
                     <exclude reference="zl2-pl-J2C"/>
+                    <include reference="85d-fO-F1y"/>
+                    <include reference="Pig-eC-kN6"/>
                 </mask>
             </variation>
         </view>
@@ -67,4 +100,7 @@
             </connections>
         </searchDisplayController>
     </objects>
+    <resources>
+        <image name="PoweredByGoogle" width="104" height="16"/>
+    </resources>
 </document>
