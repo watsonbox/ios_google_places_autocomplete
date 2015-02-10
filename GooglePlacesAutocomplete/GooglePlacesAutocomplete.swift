@@ -9,7 +9,86 @@
 import UIKit
 import Alamofire
 
-class GooglePlacesAutocomplete: UIViewController {
+enum PlaceType: Printable {
+  case All
+  case Geocode
+  case Address
+  case Establishment
+  case Regions
+  case Cities
+
+  var description : String {
+    switch self {
+    case .All: return ""
+    case .Geocode: return "geocode"
+    case .Address: return "address"
+    case .Establishment: return "establishment"
+    case .Regions: return "regions"
+    case .Cities: return "cities"
+    }
+  }
+}
+
+struct Place {
+  let id: String
+  let description: String
+}
+
+protocol GooglePlacesAutocompleteDelegate {
+  func placeSelected(place: Place)
+  func placeViewClosed()
+}
+
+// MARK: - GooglePlacesAutocomplete
+class GooglePlacesAutocomplete: UINavigationController {
+  var gpaViewController: GooglePlacesAutocompleteContainer?
+
+  var placeDelegate: GooglePlacesAutocompleteDelegate? {
+    get { return gpaViewController?.delegate }
+    set { gpaViewController?.delegate = newValue }
+  }
+
+  convenience init(apiKey: String, placeType: PlaceType = .All) {
+    let gpaViewController = GooglePlacesAutocompleteContainer(
+      apiKey: apiKey,
+      placeType: placeType
+    )
+
+    self.init(rootViewController: gpaViewController)
+    self.gpaViewController = gpaViewController
+
+    let closeButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop, target: self, action: "close")
+
+    gpaViewController.navigationItem.leftBarButtonItem = closeButton
+    gpaViewController.navigationItem.title = "Enter Address"
+  }
+
+  func close() {
+    placeDelegate?.placeViewClosed()
+  }
+}
+
+// MARK: - GooglePlaceSearchDisplayController
+class GooglePlaceSearchDisplayController: UISearchDisplayController {
+  override func setActive(visible: Bool, animated: Bool) {
+    if active == visible { return }
+
+    searchContentsController.navigationController?.navigationBarHidden = true
+    super.setActive(visible, animated: animated)
+
+    searchContentsController.navigationController?.navigationBarHidden = false
+
+    if visible {
+      searchBar.becomeFirstResponder()
+    } else {
+      searchBar.resignFirstResponder()
+    }
+  }
+}
+
+// MARK: - GooglePlacesAutocompleteContainer
+class GooglePlacesAutocompleteContainer: UIViewController {
+  var delegate: GooglePlacesAutocompleteDelegate?
   var apiKey: String?
   var places = [Place]()
   var placeType: PlaceType = .All
@@ -28,7 +107,8 @@ class GooglePlacesAutocomplete: UIViewController {
   }
 }
 
-extension GooglePlacesAutocomplete: UITableViewDataSource, UITableViewDelegate {
+// MARK: - GooglePlacesAutocompleteContainer (UITableViewDataSource / UITableViewDelegate)
+extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewDelegate {
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return places.count
   }
@@ -45,9 +125,14 @@ extension GooglePlacesAutocomplete: UITableViewDataSource, UITableViewDelegate {
     
     return cell
   }
+
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    delegate?.placeSelected(self.places[indexPath.row])
+  }
 }
 
-extension GooglePlacesAutocomplete: UISearchDisplayDelegate {
+// MARK: - GooglePlacesAutocompleteContainer (UISearchDisplayDelegate)
+extension GooglePlacesAutocompleteContainer: UISearchDisplayDelegate {
   func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
     getPlaces(searchString)
     return false

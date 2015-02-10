@@ -17,6 +17,18 @@ class ViewController: UIViewController {
       placeType: .Address
     )
 
-    presentViewController(gpaViewController, animated: false, completion: nil)
+    gpaViewController.placeDelegate = self
+
+    presentViewController(gpaViewController, animated: true, completion: nil)
+  }
+}
+
+extension ViewController: GooglePlacesAutocompleteDelegate {
+  func placeSelected(place: Place) {
+    println(place.description)
+  }
+
+  func placeViewClosed() {
+    dismissViewControllerAnimated(true, completion: nil)
   }
 }

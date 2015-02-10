@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GooglePlacesAutocomplete" customModule="GooglePlacesAutocomplete" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GooglePlacesAutocompleteContainer" customModule="GooglePlacesAutocomplete" customModuleProvider="target">
             <connections>
                 <outlet property="searchDisplayController" destination="g6W-b8-ESV" id="OE9-rh-oxO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -27,7 +27,12 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="aW0-Kc-vur" secondAttribute="trailing" id="UYZ-aW-9O3"/>
                 <constraint firstItem="aW0-Kc-vur" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pkk-e1-Ts3"/>
-                <constraint firstItem="aW0-Kc-vur" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="scT-41-KjJ"/>
+                <constraint firstItem="aW0-Kc-vur" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yc5-J8-Dbj">
+                    <variation key="heightClass=regular-widthClass=compact" constant="64"/>
+                </constraint>
+                <constraint firstItem="aW0-Kc-vur" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zl2-pl-J2C">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
@@ -36,7 +41,8 @@
                 <mask key="constraints">
                     <exclude reference="UYZ-aW-9O3"/>
                     <exclude reference="pkk-e1-Ts3"/>
-                    <exclude reference="scT-41-KjJ"/>
+                    <exclude reference="yc5-J8-Dbj"/>
+                    <exclude reference="zl2-pl-J2C"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -46,11 +52,12 @@
                 <mask key="constraints">
                     <include reference="UYZ-aW-9O3"/>
                     <include reference="pkk-e1-Ts3"/>
-                    <include reference="scT-41-KjJ"/>
+                    <include reference="yc5-J8-Dbj"/>
+                    <exclude reference="zl2-pl-J2C"/>
                 </mask>
             </variation>
         </view>
-        <searchDisplayController id="g6W-b8-ESV">
+        <searchDisplayController id="g6W-b8-ESV" customClass="GooglePlaceSearchDisplayController" customModule="GooglePlacesAutocomplete" customModuleProvider="target">
             <connections>
                 <outlet property="delegate" destination="-1" id="G6t-2u-ue5"/>
                 <outlet property="searchBar" destination="aW0-Kc-vur" id="MlP-09-wzT"/>
