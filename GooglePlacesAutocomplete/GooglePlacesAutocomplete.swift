@@ -41,11 +41,12 @@ protocol GooglePlacesAutocompleteDelegate {
 
 // MARK: - GooglePlacesAutocomplete
 class GooglePlacesAutocomplete: UINavigationController {
-  var gpaViewController: GooglePlacesAutocompleteContainer?
+  var gpaViewController: GooglePlacesAutocompleteContainer!
+  var closeButton: UIBarButtonItem!
 
   var placeDelegate: GooglePlacesAutocompleteDelegate? {
-    get { return gpaViewController?.delegate }
-    set { gpaViewController?.delegate = newValue }
+    get { return gpaViewController.delegate }
+    set { gpaViewController.delegate = newValue }
   }
 
   convenience init(apiKey: String, placeType: PlaceType = .All) {
@@ -57,7 +58,7 @@ class GooglePlacesAutocomplete: UINavigationController {
     self.init(rootViewController: gpaViewController)
     self.gpaViewController = gpaViewController
 
-    let closeButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop, target: self, action: "close")
+    closeButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop, target: self, action: "close")
 
     gpaViewController.navigationItem.leftBarButtonItem = closeButton
     gpaViewController.navigationItem.title = "Enter Address"
