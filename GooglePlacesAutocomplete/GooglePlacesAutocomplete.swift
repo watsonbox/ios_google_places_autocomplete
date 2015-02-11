@@ -69,26 +69,11 @@ class GooglePlacesAutocomplete: UINavigationController {
   }
 }
 
-// MARK: - GooglePlaceSearchDisplayController
-class GooglePlaceSearchDisplayController: UISearchDisplayController {
-  override func setActive(visible: Bool, animated: Bool) {
-    if active == visible { return }
-
-    searchContentsController.navigationController?.navigationBarHidden = true
-    super.setActive(visible, animated: animated)
-
-    searchContentsController.navigationController?.navigationBarHidden = false
-
-    if visible {
-      searchBar.becomeFirstResponder()
-    } else {
-      searchBar.resignFirstResponder()
-    }
-  }
-}
-
 // MARK: - GooglePlacesAutocompleteContainer
 class GooglePlacesAutocompleteContainer: UIViewController {
+  @IBOutlet weak var searchBar: UISearchBar!
+  @IBOutlet weak var tableView: UITableView!
+
   var delegate: GooglePlacesAutocompleteDelegate?
   var apiKey: String?
   var places = [Place]()
@@ -100,11 +85,38 @@ class GooglePlacesAutocompleteContainer: UIViewController {
     self.placeType = placeType
   }
 
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self)
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let tv: UITableView? = searchDisplayController?.searchResultsTableView
-    tv?.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown:", name: UIKeyboardDidShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillBeHidden:", name: UIKeyboardWillHideNotification, object: nil)
+
+    searchBar.becomeFirstResponder()
+    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+  }
+
+  func keyboardWasShown(notification: NSNotification) {
+    if isViewLoaded() && view.window != nil {
+      println("show")
+      var info: Dictionary = notification.userInfo!
+      var keyboardSize: CGSize = (info[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue().size)!
+
+      var contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
+
+      tableView.contentInset = contentInsets;
+      tableView.scrollIndicatorInsets = contentInsets;
+    }
+  }
+
+  func keyboardWillBeHidden(notification: NSNotification) {
+    if isViewLoaded() && view.window != nil {
+      self.tableView.contentInset = UIEdgeInsetsZero
+      self.tableView.scrollIndicatorInsets = UIEdgeInsetsZero
+    }
   }
 }
 
@@ -115,7 +127,7 @@ extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewD
   }
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = self.searchDisplayController?.searchResultsTableView?.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
     // Get the corresponding candy from our candies array
     let place = self.places[indexPath.row]
@@ -132,11 +144,16 @@ extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewD
   }
 }
 
-// MARK: - GooglePlacesAutocompleteContainer (UISearchDisplayDelegate)
-extension GooglePlacesAutocompleteContainer: UISearchDisplayDelegate {
-  func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
-    getPlaces(searchString)
-    return false
+// MARK: - GooglePlacesAutocompleteContainer (UISearchBarDelegate)
+extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
+  func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    if (searchText == "") {
+      self.places = []
+      tableView.hidden = true
+    } else {
+      getPlaces(searchText)
+      tableView.hidden = false
+    }
   }
 
   private func getPlaces(searchString: String) {
@@ -158,7 +175,7 @@ extension GooglePlacesAutocompleteContainer: UISearchDisplayDelegate {
           }
         }
 
-        self.searchDisplayController?.searchResultsTableView?.reloadData()
+        self.tableView.reloadData()
     }
   }
 }
