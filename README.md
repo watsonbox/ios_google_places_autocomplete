@@ -1,6 +1,6 @@
 # GooglePlacesAutocomplete
 
-A simple Google Places API address entry view for iOS devices.
+A simple [Google Places API](https://developers.google.com/places/documentation/autocomplete) autocompleting address entry view for iOS devices.
 
 There are already a couple of solutions out there for this. GooglePlacesAutocomplete is different because it is 100% Swift, and aims to provide the simplest possible method of entering validated, autocompleted addresses. No attempt has been made to integrate MapKit since displaying Google Places on a non-Google map is against their terms of service.
 
