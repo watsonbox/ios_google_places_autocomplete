@@ -73,6 +73,7 @@ class GooglePlacesAutocomplete: UINavigationController {
 class GooglePlacesAutocompleteContainer: UIViewController {
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var topConstraint: NSLayoutConstraint!
 
   var delegate: GooglePlacesAutocompleteDelegate?
   var apiKey: String?
@@ -89,6 +90,10 @@ class GooglePlacesAutocompleteContainer: UIViewController {
     NSNotificationCenter.defaultCenter().removeObserver(self)
   }
 
+  override func viewWillLayoutSubviews() {
+    topConstraint.constant = topLayoutGuide.length
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -101,11 +106,9 @@ class GooglePlacesAutocompleteContainer: UIViewController {
 
   func keyboardWasShown(notification: NSNotification) {
     if isViewLoaded() && view.window != nil {
-      println("show")
-      var info: Dictionary = notification.userInfo!
-      var keyboardSize: CGSize = (info[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue().size)!
-
-      var contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
+      let info: Dictionary = notification.userInfo!
+      let keyboardSize: CGSize = (info[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue().size)!
+      let contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
 
       tableView.contentInset = contentInsets;
       tableView.scrollIndicatorInsets = contentInsets;

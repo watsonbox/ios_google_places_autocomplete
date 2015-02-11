@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="searchBar" destination="24m-Y8-A7A" id="kjW-B6-Zvx"/>
                 <outlet property="tableView" destination="6Gg-TX-rba" id="qba-cB-o36"/>
+                <outlet property="topConstraint" destination="0qa-fT-QpK" id="x97-An-kDn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoweredByGoogle" translatesAutoresizingMaskIntoConstraints="NO" id="DsE-yN-ypR">
-                    <rect key="frame" x="200" y="500" width="200" height="50"/>
+                    <rect key="frame" x="200" y="158" width="200" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="GaF-og-gpE"/>
                         <constraint firstAttribute="height" constant="50" id="OLH-hh-9Jb"/>
@@ -44,8 +45,8 @@
                 <constraint firstItem="24m-Y8-A7A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="0qa-fT-QpK"/>
                 <constraint firstItem="6Gg-TX-rba" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1EL-lI-b3n"/>
                 <constraint firstAttribute="centerX" secondItem="DsE-yN-ypR" secondAttribute="centerX" id="85d-fO-F1y"/>
-                <constraint firstAttribute="bottom" secondItem="DsE-yN-ypR" secondAttribute="bottom" constant="50" id="Pig-eC-kN6"/>
                 <constraint firstAttribute="trailing" secondItem="24m-Y8-A7A" secondAttribute="trailing" id="QNn-yd-yU1"/>
+                <constraint firstItem="DsE-yN-ypR" firstAttribute="top" secondItem="24m-Y8-A7A" secondAttribute="bottom" constant="50" id="RL6-oA-2av"/>
                 <constraint firstItem="6Gg-TX-rba" firstAttribute="top" secondItem="24m-Y8-A7A" secondAttribute="bottom" id="fGn-HG-TsT"/>
                 <constraint firstAttribute="bottom" secondItem="6Gg-TX-rba" secondAttribute="bottom" id="hWE-lP-A72"/>
                 <constraint firstItem="24m-Y8-A7A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lPB-8T-UVk"/>
