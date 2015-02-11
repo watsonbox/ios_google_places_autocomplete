@@ -18,10 +18,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoweredByGoogle" translatesAutoresizingMaskIntoConstraints="NO" id="DsE-yN-ypR">
-                    <rect key="frame" x="200" y="158" width="200" height="50"/>
+                    <rect key="frame" x="250" y="128" width="100" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="200" id="GaF-og-gpE"/>
-                        <constraint firstAttribute="height" constant="50" id="OLH-hh-9Jb"/>
+                        <constraint firstAttribute="width" constant="100" id="GaF-og-gpE"/>
+                        <constraint firstAttribute="height" constant="30" id="OLH-hh-9Jb"/>
                     </constraints>
                 </imageView>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="24m-Y8-A7A">
@@ -46,7 +46,7 @@
                 <constraint firstItem="6Gg-TX-rba" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1EL-lI-b3n"/>
                 <constraint firstAttribute="centerX" secondItem="DsE-yN-ypR" secondAttribute="centerX" id="85d-fO-F1y"/>
                 <constraint firstAttribute="trailing" secondItem="24m-Y8-A7A" secondAttribute="trailing" id="QNn-yd-yU1"/>
-                <constraint firstItem="DsE-yN-ypR" firstAttribute="top" secondItem="24m-Y8-A7A" secondAttribute="bottom" constant="50" id="RL6-oA-2av"/>
+                <constraint firstItem="DsE-yN-ypR" firstAttribute="top" secondItem="24m-Y8-A7A" secondAttribute="bottom" constant="20" id="RL6-oA-2av"/>
                 <constraint firstItem="6Gg-TX-rba" firstAttribute="top" secondItem="24m-Y8-A7A" secondAttribute="bottom" id="fGn-HG-TsT"/>
                 <constraint firstAttribute="bottom" secondItem="6Gg-TX-rba" secondAttribute="bottom" id="hWE-lP-A72"/>
                 <constraint firstItem="24m-Y8-A7A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lPB-8T-UVk"/>
