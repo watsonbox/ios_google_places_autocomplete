@@ -155,30 +155,100 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
       tableView.hidden = true
     } else {
       getPlaces(searchText)
-      tableView.hidden = false
     }
   }
 
+  /**
+    Call the Google Places API and update the view with results.
+
+    :param: searchString The search query
+  */
   private func getPlaces(searchString: String) {
-    Alamofire.request(.GET,
-      "https://maps.googleapis.com/maps/api/place/autocomplete/json",
-      parameters: [
-        "input": searchString,
-        "type": "(\(placeType.description))",
-        "key": apiKey ?? ""
-      ]).responseJSON { request, response, json, error in
-        if let response = json as? NSDictionary {
-          if let predictions = response["predictions"] as? Array<AnyObject> {
-            self.places = predictions.map { (prediction: AnyObject) -> Place in
-              return Place(
-                id: prediction["id"] as String,
-                description: prediction["description"] as String
-              )
-            }
-          }
+    var request = requestForSearch(searchString)
+    var session = NSURLSession.sharedSession()
+    var task = session.dataTaskWithRequest(request) { data, response, error in
+      self.handleResponse(data, response: response as? NSHTTPURLResponse, error: error)
+    }
+
+    task.resume()
+  }
+
+  private func handleResponse(data: NSData!, response: NSHTTPURLResponse!, error: NSError!) {
+    if let error = error {
+      println("GooglePlacesAutocomplete Error: \(error.localizedDescription)")
+      return
+    }
+
+    if response == nil {
+      println("GooglePlacesAutocomplete Error: No response from API")
+      return
+    }
+
+    if response.statusCode != 200 {
+      println("GooglePlacesAutocomplete Error: Invalid status code \(response.statusCode) from API")
+      return
+    }
+
+    var serializationError: NSError?
+    var json: NSDictionary = NSJSONSerialization.JSONObjectWithData(
+      data,
+      options: NSJSONReadingOptions.MutableContainers,
+      error: &serializationError
+    ) as NSDictionary
+
+    if let error = serializationError {
+      println("GooglePlacesAutocomplete Error: \(error.localizedDescription)")
+      return
+    }
+
+    // Perform table updates on UI thread
+    dispatch_async(dispatch_get_main_queue(), {
+      UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+
+      if let predictions = json["predictions"] as? Array<AnyObject> {
+        self.places = predictions.map { (prediction: AnyObject) -> Place in
+          return Place(
+            id: prediction["id"] as String,
+            description: prediction["description"] as String
+          )
         }
 
         self.tableView.reloadData()
+        self.tableView.hidden = false
+      }
+    })
+  }
+
+  private func requestForSearch(searchString: String) -> NSURLRequest {
+    let params = [
+      "input": searchString,
+      "type": "(\(placeType.description))",
+      "key": apiKey ?? ""
+    ]
+
+    return NSMutableURLRequest(
+      URL: NSURL(string: "https://maps.googleapis.com/maps/api/place/autocomplete/json?\(query(params))")!
+    )
+  }
+
+  /**
+    Build a query string from a dictionary
+
+    :param: parameters Dictionary of query string parameters
+    :returns: The properly escaped query string
+  */
+  private func query(parameters: [String: AnyObject]) -> String {
+    var components: [(String, String)] = []
+    for key in sorted(Array(parameters.keys), <) {
+      let value: AnyObject! = parameters[key]
+      components += [(escape(key), escape("\(value)"))]
     }
+
+    return join("&", components.map{"\($0)=\($1)"} as [String])
+  }
+
+  private func escape(string: String) -> String {
+    let legalURLCharactersToBeEscaped: CFStringRef = ":/?&=;+!@#$()',*"
+    return CFURLCreateStringByAddingPercentEscapes(nil, string, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue)
   }
 }
