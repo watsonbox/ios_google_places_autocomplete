@@ -18,12 +18,11 @@ There are already a couple of solutions out there for this. GooglePlacesAutocomp
 
 - iOS 8.0+
 - XCode 6.1
-- Alamofire
 
 
 ## Installation
 
-Simply copy `GooglePlacesAutocomplete.swift` and `GooglePlacesAutocomplete.xib` to your project. You will also need [Alamofire](https://github.com/Alamofire/Alamofire) for networking.
+Simply copy `GooglePlacesAutocomplete.swift` and `GooglePlacesAutocomplete.xib` to your project.
 
 Framework / CocoaPod to follow.
 
