@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum PlaceType: Printable {
+public enum PlaceType: Printable {
   case All
   case Geocode
   case Address
@@ -16,7 +16,7 @@ enum PlaceType: Printable {
   case Regions
   case Cities
 
-  var description : String {
+  public var description : String {
     switch self {
       case .All: return ""
       case .Geocode: return "geocode"
@@ -28,27 +28,37 @@ enum PlaceType: Printable {
   }
 }
 
-struct Place {
-  let id: String
-  let description: String
+public class Place: NSObject {
+  public let id: String
+  public let desc: String
+
+  override public var description: String {
+    get { return desc }
+  }
+
+  init(id: String, description: String) {
+    self.id = id
+    self.desc = description
+  }
 }
 
-protocol GooglePlacesAutocompleteDelegate {
-  func placeSelected(place: Place)
-  func placeViewClosed()
+@objc public protocol GooglePlacesAutocompleteDelegate {
+  optional func placesFound(places: [Place])
+  optional func placeSelected(place: Place)
+  optional func placeViewClosed()
 }
 
 // MARK: - GooglePlacesAutocomplete
-class GooglePlacesAutocomplete: UINavigationController {
-  var gpaViewController: GooglePlacesAutocompleteContainer!
-  var closeButton: UIBarButtonItem!
+public class GooglePlacesAutocomplete: UINavigationController {
+  public var gpaViewController: GooglePlacesAutocompleteContainer!
+  public var closeButton: UIBarButtonItem!
 
-  var placeDelegate: GooglePlacesAutocompleteDelegate? {
+  public var placeDelegate: GooglePlacesAutocompleteDelegate? {
     get { return gpaViewController.delegate }
     set { gpaViewController.delegate = newValue }
   }
 
-  convenience init(apiKey: String, placeType: PlaceType = .All) {
+  public convenience init(apiKey: String, placeType: PlaceType = .All) {
     let gpaViewController = GooglePlacesAutocompleteContainer(
       apiKey: apiKey,
       placeType: placeType
@@ -64,13 +74,13 @@ class GooglePlacesAutocomplete: UINavigationController {
   }
 
   func close() {
-    placeDelegate?.placeViewClosed()
+    placeDelegate?.placeViewClosed?()
   }
 }
 
 // MARK: - GooglePlacesAutocompleteContainer
-class GooglePlacesAutocompleteContainer: UIViewController {
-  @IBOutlet weak var searchBar: UISearchBar!
+public class GooglePlacesAutocompleteContainer: UIViewController {
+  @IBOutlet public weak var searchBar: UISearchBar!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var topConstraint: NSLayoutConstraint!
 
@@ -80,7 +90,9 @@ class GooglePlacesAutocompleteContainer: UIViewController {
   var placeType: PlaceType = .All
 
   convenience init(apiKey: String, placeType: PlaceType = .All) {
-    self.init(nibName: "GooglePlacesAutocomplete", bundle: nil)
+    let bundle = NSBundle(forClass: GooglePlacesAutocompleteContainer.self)
+
+    self.init(nibName: "GooglePlacesAutocomplete", bundle: bundle)
     self.apiKey = apiKey
     self.placeType = placeType
   }
@@ -89,11 +101,11 @@ class GooglePlacesAutocompleteContainer: UIViewController {
     NSNotificationCenter.defaultCenter().removeObserver(self)
   }
 
-  override func viewWillLayoutSubviews() {
+  override public func viewWillLayoutSubviews() {
     topConstraint.constant = topLayoutGuide.length
   }
 
-  override func viewDidLoad() {
+  override public func viewDidLoad() {
     super.viewDidLoad()
 
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown:", name: UIKeyboardDidShowNotification, object: nil)
@@ -124,11 +136,11 @@ class GooglePlacesAutocompleteContainer: UIViewController {
 
 // MARK: - GooglePlacesAutocompleteContainer (UITableViewDataSource / UITableViewDelegate)
 extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewDelegate {
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return places.count
   }
 
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
     // Get the corresponding candy from our candies array
@@ -141,14 +153,14 @@ extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewD
     return cell
   }
 
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    delegate?.placeSelected(self.places[indexPath.row])
+  public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    delegate?.placeSelected?(self.places[indexPath.row])
   }
 }
 
 // MARK: - GooglePlacesAutocompleteContainer (UISearchBarDelegate)
 extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
-  func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+  public func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
     if (searchText == "") {
       self.places = []
       tableView.hidden = true
@@ -214,6 +226,7 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
 
         self.tableView.reloadData()
         self.tableView.hidden = false
+        self.delegate?.placesFound?(self.places)
       }
     })
   }

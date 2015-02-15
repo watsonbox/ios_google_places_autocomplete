@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1EC16D431A8A1E8500E0760A"
-               BuildableName = "GooglePlacesAutocomplete.app"
+               BlueprintIdentifier = "1EC16D801A8E1D0100E0760A"
+               BuildableName = "GooglePlacesAutocomplete.framework"
                BlueprintName = "GooglePlacesAutocomplete"
                ReferencedContainer = "container:GooglePlacesAutocomplete.xcodeproj">
             </BuildableReference>
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1EC16D581A8A1E8500E0760A"
+               BlueprintIdentifier = "1EC16D8B1A8E1D0100E0760A"
                BuildableName = "GooglePlacesAutocompleteTests.xctest"
                BlueprintName = "GooglePlacesAutocompleteTests"
                ReferencedContainer = "container:GooglePlacesAutocomplete.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1EC16D581A8A1E8500E0760A"
+               BlueprintIdentifier = "1EC16D8B1A8E1D0100E0760A"
                BuildableName = "GooglePlacesAutocompleteTests.xctest"
                BlueprintName = "GooglePlacesAutocompleteTests"
                ReferencedContainer = "container:GooglePlacesAutocomplete.xcodeproj">
@@ -56,8 +56,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1EC16D431A8A1E8500E0760A"
-            BuildableName = "GooglePlacesAutocomplete.app"
+            BlueprintIdentifier = "1EC16D801A8E1D0100E0760A"
+            BuildableName = "GooglePlacesAutocomplete.framework"
             BlueprintName = "GooglePlacesAutocomplete"
             ReferencedContainer = "container:GooglePlacesAutocomplete.xcodeproj">
          </BuildableReference>
@@ -72,15 +72,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1EC16D431A8A1E8500E0760A"
-            BuildableName = "GooglePlacesAutocomplete.app"
+            BlueprintIdentifier = "1EC16D801A8E1D0100E0760A"
+            BuildableName = "GooglePlacesAutocomplete.framework"
             BlueprintName = "GooglePlacesAutocomplete"
             ReferencedContainer = "container:GooglePlacesAutocomplete.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,15 +90,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1EC16D431A8A1E8500E0760A"
-            BuildableName = "GooglePlacesAutocomplete.app"
+            BlueprintIdentifier = "1EC16D801A8E1D0100E0760A"
+            BuildableName = "GooglePlacesAutocomplete.framework"
             BlueprintName = "GooglePlacesAutocomplete"
             ReferencedContainer = "container:GooglePlacesAutocomplete.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

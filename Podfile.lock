@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (1.5)
+  - Nimble (0.3.0)
+  - Nimble-Snapshots (0.3):
+    - FBSnapshotTestCase (~> 1.5)
+    - Nimble (~> 0.3)
+    - Quick (~> 0.2)
+  - OHHTTPStubs (3.1.10):
+    - OHHTTPStubs/Core (= 3.1.10)
+  - OHHTTPStubs/Core (3.1.10)
+  - Quick (0.2.2)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - Nimble (= 0.3.0)
+  - Nimble-Snapshots
+  - OHHTTPStubs
+  - Quick (= 0.2.2)
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: e2914fbaabccea1dcc773d6a16b1c24540642488
+  Nimble: a4d9d978129e83d73e33b7d8bce57443bd556068
+  Nimble-Snapshots: b2677e1b7f493eae6288cc8b71fceab4ffb496a5
+  OHHTTPStubs: 2038e929b6abb94881000524c1cb4aba0a1bb4a2
+  Quick: 7b89ff625e72ef931c2a9ef2f25ac3a9d2457763
+
+COCOAPODS: 0.36.0.beta.2

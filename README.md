@@ -49,7 +49,7 @@ presentViewController(gpaViewController, animated: true, completion: nil)
 - `placeSelected(place: Place)`: Invoked when a new place is selected
 - `placeViewClosed()`: Invoked when the view is closed
 
-Here's a [complete example](https://github.com/watsonbox/ios_google_places_autocomplete/blob/master/GooglePlacesAutocomplete/ViewController.swift).
+Here's a [complete example](https://github.com/watsonbox/ios_google_places_autocomplete/blob/master/GooglePlacesAutocompleteExample/GooglePlacesAutocompleteExample/ViewController.swift).
 
 
 ## Contributing
