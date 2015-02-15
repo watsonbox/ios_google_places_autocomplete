@@ -39,10 +39,17 @@ let gpaViewController = GooglePlacesAutocomplete(
   placeType: .Address
 )
 
-gpaViewController.placeDelegate = self
+gpaViewController.placeDelegate = self // Conforms to GooglePlacesAutocompleteDelegate
 
 presentViewController(gpaViewController, animated: true, completion: nil)
 ```
+
+`GooglePlacesAutocompleteDelegate` supports two methods:
+
+- `placeSelected(place: Place)`: Invoked when a new place is selected
+- `placeViewClosed()`: Invoked when the view is closed
+
+Here's a [complete example](https://github.com/watsonbox/ios_google_places_autocomplete/blob/master/GooglePlacesAutocomplete/ViewController.swift).
 
 
 ## Contributing
