@@ -1,6 +1,7 @@
 # GooglePlacesAutocomplete
 
 [![Build Status](http://img.shields.io/travis/watsonbox/ios_google_places_autocomplete.svg?style=flat)](https://travis-ci.org/watsonbox/ios_google_places_autocomplete)
+[![CocoaPod](https://img.shields.io/cocoapods/v/GooglePlacesAutocomplete.svg)](http://cocoadocs.org/docsets/GooglePlacesAutocomplete/)
 
 A simple [Google Places API](https://developers.google.com/places/documentation/autocomplete) autocompleting address entry view for iOS devices.
 
