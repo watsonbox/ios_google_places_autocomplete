@@ -6,4 +6,4 @@ before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-  - set -o pipefail && xcodebuild -workspace GooglePlacesAutocomplete.xcworkspace -scheme "GooglePlacesAutocompleteExample" -sdk iphonesimulator -destination 'name=iPhone 5S' -configuration Release ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+  - set -o pipefail && xcodebuild -workspace GooglePlacesAutocomplete.xcworkspace -scheme "GooglePlacesAutocompleteExample" -sdk iphonesimulator -configuration Release ONLY_ACTIVE_ARCH=NO test | xcpretty -c
