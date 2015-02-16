@@ -9,18 +9,13 @@
 import Foundation
 import UIKit
 import XCTest
-import Quick
-import Nimble
-import Nimble_Snapshots
-import OHHTTPStubs
-import FBSnapshotTestCase
 import GooglePlacesAutocomplete
 
-class GooglePlacesAutocompleteTests: QuickSpec, GooglePlacesAutocompleteDelegate {
+class GooglePlacesAutocompleteTests: FBSnapshotTestCase, GooglePlacesAutocompleteDelegate {
   let gpaViewController = GooglePlacesAutocomplete(apiKey: "APIKEY")
   var expectation: XCTestExpectation!
 
-  override func spec() {
+  func testGooglePlacesAutocomplete() {
     let json: [String : AnyObject] = ["predictions" : [prediction1, prediction2]]
     expectation = self.expectationWithDescription("Should return results")
 
@@ -31,28 +26,26 @@ class GooglePlacesAutocompleteTests: QuickSpec, GooglePlacesAutocompleteDelegate
         return OHHTTPStubsResponse(JSONObject: json, statusCode: 200, headers: nil)
     })
 
-    it("calls the Google Places API and shows the results") {
-      self.gpaViewController.placeDelegate = self
+    self.gpaViewController.placeDelegate = self
 
-      UIApplication.sharedApplication().keyWindow!.rootViewController = UIViewController()
+    UIApplication.sharedApplication().keyWindow!.rootViewController = UIViewController()
 
-      let rootVC = UIApplication.sharedApplication().keyWindow!.rootViewController!
+    let rootVC = UIApplication.sharedApplication().keyWindow!.rootViewController!
 
-      rootVC.presentViewController(self.gpaViewController, animated: false, completion: {
-        expect(self.gpaViewController.view).to( haveValidSnapshot(named: "view"))
+    rootVC.presentViewController(self.gpaViewController, animated: false, completion: {
+      self.snapshotVerifyView(self.gpaViewController.view, withIdentifier: "view")
 
-        self.gpaViewController.gpaViewController.searchBar(
-          self.gpaViewController.gpaViewController.searchBar,
-          textDidChange: "Paris"
-        )
-      })
+      self.gpaViewController.gpaViewController.searchBar(
+        self.gpaViewController.gpaViewController.searchBar,
+        textDidChange: "Paris"
+      )
+    })
 
-      self.waitForExpectationsWithTimeout(2.0, handler: nil)
-    }
+    self.waitForExpectationsWithTimeout(2.0, handler: nil)
   }
 
   func placesFound(places: [Place]) {
-    expect(self.gpaViewController.view).to( haveValidSnapshot(named: "search"))
+    self.snapshotVerifyView(self.gpaViewController.view, withIdentifier: "search")
     expectation.fulfill()
   }
 

@@ -19,9 +19,6 @@ end
 target 'GooglePlacesAutocompleteExampleTests' do
   xcodeproj 'GooglePlacesAutocompleteExample/GooglePlacesAutocompleteExample.xcodeproj'
 
-  pod 'Quick', '0.2.2' # Last Swift 1.1 release
-  pod 'Nimble', '0.3.0' # Last Swift 1.1 release
   pod 'OHHTTPStubs'
-  pod 'FBSnapshotTestCase'
-  pod 'Nimble-Snapshots'
+  pod 'FBSnapshotTestCase', :git => "https://github.com/delannoyk/ios-snapshot-test-case"
 end

@@ -91,4 +91,18 @@
                    identifier:(NSString *)identifier
                         error:(NSError **)errorPtr;
 
+/**
+ Similar to our much-loved XCTAssert() macros. Use this to perform your test. No need to write an explanation, though.
+ @param view The view to snapshot
+ @param identifier An optional identifier, used if there are multiple snapshot tests in a given -test method.
+ */
+- (void) snapshotVerifyView:(UIView *)view withIdentifier:(NSString *)identifier;
+
+/**
+ Similar to our much-loved XCTAssert() macros. Use this to perform your test. No need to write an explanation, though.
+ @param layer The layer to snapshot
+ @param identifier An optional identifier, used if there are multiple snapshot tests in a given -test method.
+ */
+- (void) snapshotVerifyLayer:(CALayer *)layer withIdentifier:(NSString *)identifier;
+
 @end

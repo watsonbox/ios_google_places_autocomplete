@@ -36,7 +36,7 @@ Installation with CocoaPods
 
      ```
      target "Tests" do
-       pod 'FBSnapshotTestCase'
+       pod 'FBSnapshotTestCase', :git => 'https://github.com/delannoyk/ios-snapshot-test-case'
      end
      ```
 
@@ -52,7 +52,7 @@ Creating a snapshot test
 ------------------------
 
 1. Subclass `FBSnapshotTestCase` instead of `XCTestCase`.
-2. From within your test, use `FBSnapshotVerifyView`.
+2. From within your test, use `self.FBSnapshotVerifyView`.
 3. Run the test once with `self.recordMode = YES;` in the test's `-setUp`
    method. (This creates the reference images on disk.)
 4. Remove the line enabling record mode and run the test.
@@ -67,7 +67,7 @@ Features
   you have [Kaleidoscope](http://www.kaleidoscopeapp.com) installed.)
 - Supply an optional "identifier" if you want to perform multiple snapshots
   in a single test method.
-- Support for `CALayer` via `FBSnapshotVerifyLayer`.
+- Support for `CALayer` via `self.FBSnapshotVerifyLayer`.
 
 Notes
 -----
