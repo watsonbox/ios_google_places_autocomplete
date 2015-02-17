@@ -1,0 +1,17 @@
+require 'xcjobs'
+
+def destinations
+  [ 'name=iPhone 5s,OS=8.1' ]
+end
+
+XCJobs::Test.new('test') do |t|
+  t.workspace = 'GooglePlacesAutocomplete'
+  t.scheme = 'GooglePlacesAutocompleteExample'
+  t.configuration = 'Release'
+  t.build_dir = 'build'
+  t.formatter = 'xcpretty -c'
+
+  destinations.each do |destination|
+    t.add_destination(destination)
+  end
+end
