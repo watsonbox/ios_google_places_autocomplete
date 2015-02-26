@@ -36,7 +36,7 @@ public class Place: NSObject {
     get { return desc }
   }
 
-  init(id: String, description: String) {
+  public init(id: String, description: String) {
     self.id = id
     self.desc = description
   }
