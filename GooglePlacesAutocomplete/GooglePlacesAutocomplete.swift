@@ -220,7 +220,7 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
       if let predictions = json["predictions"] as? Array<AnyObject> {
         self.places = predictions.map { (prediction: AnyObject) -> Place in
           return Place(
-            id: prediction["id"] as String,
+            id: prediction["place_id"] as String,
             description: prediction["description"] as String
           )
         }
