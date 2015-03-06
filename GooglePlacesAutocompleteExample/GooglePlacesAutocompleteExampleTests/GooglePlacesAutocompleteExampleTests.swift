@@ -21,7 +21,7 @@ class GooglePlacesAutocompleteTests: FBSnapshotTestCase, GooglePlacesAutocomplet
 
     OHHTTPStubs.stubRequestsPassingTest({ (request: NSURLRequest!) -> Bool in
       println(request.URL.absoluteString)
-      return request.URL.absoluteString == "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Paris&key=APIKEY&type=%28%29"
+      return request.URL.absoluteString == "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Paris&key=APIKEY&types=%28%29"
       }, withStubResponse: { (request: NSURLRequest!) -> OHHTTPStubsResponse in
         return OHHTTPStubsResponse(JSONObject: json, statusCode: 200, headers: nil)
     })
