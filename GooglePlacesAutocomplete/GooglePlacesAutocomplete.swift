@@ -235,7 +235,7 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
   private func requestForSearch(searchString: String) -> NSURLRequest {
     let params = [
       "input": searchString,
-      "type": "(\(placeType.description))",
+      "types": "(\(placeType.description))",
       "key": apiKey ?? ""
     ]
 
