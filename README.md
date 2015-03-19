@@ -35,10 +35,10 @@ No attempt has been made to integrate MapKit since displaying Google Places on a
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
 
-CocoaPods 0.36 beta adds supports for Swift and embedded frameworks. You can install it with the following command:
+CocoaPods 0.36 [adds supports](http://blog.cocoapods.org/CocoaPods-0.36/) for Swift and embedded frameworks. You can install it with the following command:
 
 ```bash
-$ gem install cocoapods --pre
+$ gem install cocoapods
 ```
 
 To integrate GooglePlacesAutocomplete into your Xcode project using CocoaPods, specify it in your `Podfile`:
