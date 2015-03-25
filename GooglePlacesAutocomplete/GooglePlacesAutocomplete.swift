@@ -58,8 +58,30 @@ public class Place: NSObject {
   
     :param: result Callback on successful completion with detailed place information
   */
-  public func getDetails(result: [String: AnyObject] -> ()) {
+  public func getDetails(result: PlaceDetails -> ()) {
     GooglePlaceDetailsRequest(place: self).request(result)
+  }
+}
+
+public class PlaceDetails: Printable {
+  public let name: String
+  public let latitude: Double
+  public let longitude: Double
+  public let raw: [String: AnyObject]
+
+  public init(json: [String: AnyObject]) {
+    let result = json["result"] as [String: AnyObject]
+    let geometry = result["geometry"] as [String: AnyObject]
+    let location = geometry["location"] as [String: AnyObject]
+
+    self.name = result["name"] as String
+    self.latitude = location["lat"] as Double
+    self.longitude = location["lng"] as Double
+    self.raw = json
+  }
+
+  public var description: String {
+    return "PlaceDetails: \(name) (\(latitude), \(longitude))"
   }
 }
 
@@ -197,15 +219,14 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
     :param: searchString The search query
   */
   private func getPlaces(searchString: String) {
-
     GooglePlacesRequestHelpers.doRequest(
       "https://maps.googleapis.com/maps/api/place/autocomplete/json",
       params: [
         "input": searchString,
         "types": placeType.description,
         "key": apiKey ?? ""
-      ]) { json in
-        println(json)
+      ]
+    ) { json in
       if let predictions = json["predictions"] as? Array<[String: AnyObject]> {
         self.places = predictions.map { (prediction: [String: AnyObject]) -> Place in
           return Place(prediction: prediction, apiKey: self.apiKey)
@@ -227,14 +248,15 @@ class GooglePlaceDetailsRequest {
     self.place = place
   }
 
-  func request(result: [String: AnyObject] -> ()) {
+  func request(result: PlaceDetails -> ()) {
     GooglePlacesRequestHelpers.doRequest(
       "https://maps.googleapis.com/maps/api/place/details/json",
       params: [
         "placeid": place.id,
         "key": place.apiKey ?? ""
-      ]) { json in
-      result(json as [String: AnyObject])
+      ]
+    ) { json in
+      result(PlaceDetails(json: json as [String: AnyObject]))
     }
   }
 }

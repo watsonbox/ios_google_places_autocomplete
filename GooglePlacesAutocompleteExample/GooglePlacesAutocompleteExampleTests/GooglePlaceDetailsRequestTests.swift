@@ -23,7 +23,8 @@ class GooglePlaceDetailsRequestTests: XCTestCase {
         ]
       ],
       "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-      "id" : "4f89212bf76dde31f092cfc14d7506555d85b5c7"
+      "id" : "4f89212bf76dde31f092cfc14d7506555d85b5c7",
+      "name" : "Google Sydney"
       // ...
     ],
     "status" : "OK"
@@ -39,17 +40,12 @@ class GooglePlaceDetailsRequestTests: XCTestCase {
         return OHHTTPStubsResponse(JSONObject: self.json, statusCode: 200, headers: nil)
     })
 
-    place.getDetails { (details: [String: AnyObject]) in
-      if let result = details["result"] as? [String: AnyObject] {
-        if let geometry = result["geometry"] as? [String: AnyObject] {
-          if let location = geometry["location"] as? [String: AnyObject] {
-            XCTAssertEqual(location["lat"] as Double, -33.8669710)
-            XCTAssertEqual(location["lng"] as Double, 151.1958750)
+    place.getDetails { details in
+      XCTAssertEqual(details.name, "Google Sydney")
+      XCTAssertEqual(details.latitude, -33.8669710)
+      XCTAssertEqual(details.longitude, 151.1958750)
 
-            expectation.fulfill()
-          }
-        }
-      }
+      expectation.fulfill()
     }
 
     self.waitForExpectationsWithTimeout(2.0, handler: nil)
