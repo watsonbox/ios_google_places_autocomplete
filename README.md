@@ -86,6 +86,41 @@ presentViewController(gpaViewController, animated: true, completion: nil)
 
 Here's a [complete example](https://github.com/watsonbox/ios_google_places_autocomplete/blob/master/GooglePlacesAutocompleteExample/GooglePlacesAutocompleteExample/ViewController.swift).
 
+### Place Details
+
+From Google's documentation: "you can request more details about a particular establishment or point of interest by initiating a [Place Details](https://developers.google.com/places/webservice/details) request. A Place Details request returns more comprehensive information about the indicated place such as its complete address, phone number, user rating and reviews."
+
+```swift
+place.getDetails { details in
+  println(details)
+}
+
+/*
+  [
+    status: OK,
+    result: {
+      "address_components" = (
+        {
+          "long_name" = Paris;
+          "short_name" = Paris;
+          types = (
+            locality,
+            political
+          );
+        },
+        ...
+      );
+      geometry = {
+        location = {
+          lat = "48.856614";
+          lng = "2.3522219";
+        };
+  ...
+*/
+```
+
+See the [documentation](https://developers.google.com/places/webservice/details#PlaceDetailsResponses) for full response details.
+
 
 ## Contributing
 

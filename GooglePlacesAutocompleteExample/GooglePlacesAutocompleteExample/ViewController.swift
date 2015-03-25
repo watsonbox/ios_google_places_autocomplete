@@ -27,6 +27,10 @@ class ViewController: UIViewController {
 extension ViewController: GooglePlacesAutocompleteDelegate {
   func placeSelected(place: Place) {
     println(place.description)
+
+    place.getDetails { details in
+      println(details)
+    }
   }
 
   func placeViewClosed() {
