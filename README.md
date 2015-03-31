@@ -136,6 +136,12 @@ gpaViewController.navigationBar.tintColor = UIColor.whiteColor()
 gpaViewController.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Zapfino", size: 16.0)!]
 ```
 
+<table>
+  <tr>
+    <td align="left"><img src="Screenshots/style.png"/></td>
+  </td>
+</table>
+
 ## Contributing
 
 1. Fork it ( https://github.com/watsonbox/ios-google-places-autocomplete/fork )
