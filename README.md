@@ -124,6 +124,17 @@ place.getDetails { details in
 
 See the [documentation](https://developers.google.com/places/webservice/details#PlaceDetailsResponses) for full response details.
 
+### Styling
+
+The UINavigationController appearance can also easily be changed, for example:
+
+```swift
+gpaViewController.navigationBar.barStyle = UIBarStyle.Black
+gpaViewController.navigationBar.translucent = false
+gpaViewController.navigationBar.barTintColor = UIColor(red: 0.11, green: 0.27, blue: 0.53, alpha: 1.0)
+gpaViewController.navigationBar.tintColor = UIColor.whiteColor()
+gpaViewController.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Zapfino", size: 16.0)!]
+```
 
 ## Contributing
 
