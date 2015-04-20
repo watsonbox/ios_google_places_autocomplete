@@ -67,7 +67,18 @@ public class PlaceDetails: Printable {
   public let name: String
   public let latitude: Double
   public let longitude: Double
+  public let viewport: Viewport?
   public let raw: [String: AnyObject]
+
+  public struct Point {
+    let latitude: Double
+    let longitude: Double
+  }
+
+  public struct Viewport {
+    let northEast: Point
+    let southWest: Point
+  }
 
   public init(json: [String: AnyObject]) {
     let result = json["result"] as! [String: AnyObject]
@@ -77,6 +88,19 @@ public class PlaceDetails: Printable {
     self.name = result["name"] as! String
     self.latitude = location["lat"] as! Double
     self.longitude = location["lng"] as! Double
+
+    if let viewport_data = geometry["viewport"] as? [String: AnyObject] {
+      let northEastData = viewport_data["northeast"] as! [String: AnyObject]
+      let southWestData = viewport_data["southwest"] as! [String: AnyObject]
+
+      let northEast = Point(latitude: northEastData["lat"] as! Double, longitude: northEastData["lng"] as! Double)
+      let southWest = Point(latitude: southWestData["lat"] as! Double, longitude: southWestData["lng"] as! Double)
+
+      viewport = Viewport(northEast: northEast, southWest: southWest)
+    } else {
+      viewport = nil
+    }
+
     self.raw = json
   }
 
