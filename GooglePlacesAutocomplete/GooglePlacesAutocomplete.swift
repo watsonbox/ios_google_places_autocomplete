@@ -44,8 +44,8 @@ public class Place: NSObject {
 
   public convenience init(prediction: [String: AnyObject], apiKey: String?) {
     self.init(
-      id: prediction["place_id"] as String,
-      description: prediction["description"] as String
+      id: prediction["place_id"] as! String,
+      description: prediction["description"] as! String
     )
 
     self.apiKey = apiKey
@@ -70,13 +70,13 @@ public class PlaceDetails: Printable {
   public let raw: [String: AnyObject]
 
   public init(json: [String: AnyObject]) {
-    let result = json["result"] as [String: AnyObject]
-    let geometry = result["geometry"] as [String: AnyObject]
-    let location = geometry["location"] as [String: AnyObject]
+    let result = json["result"] as! [String: AnyObject]
+    let geometry = result["geometry"] as! [String: AnyObject]
+    let location = geometry["location"] as! [String: AnyObject]
 
-    self.name = result["name"] as String
-    self.latitude = location["lat"] as Double
-    self.longitude = location["lng"] as Double
+    self.name = result["name"] as! String
+    self.latitude = location["lat"] as! Double
+    self.longitude = location["lng"] as! Double
     self.raw = json
   }
 
@@ -185,7 +185,7 @@ extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewD
   }
 
   public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
     // Get the corresponding candy from our candies array
     let place = self.places[indexPath.row]
@@ -256,7 +256,7 @@ class GooglePlaceDetailsRequest {
         "key": place.apiKey ?? ""
       ]
     ) { json in
-      result(PlaceDetails(json: json as [String: AnyObject]))
+      result(PlaceDetails(json: json as! [String: AnyObject]))
     }
   }
 }
@@ -281,7 +281,7 @@ class GooglePlacesRequestHelpers {
 
   private class func escape(string: String) -> String {
     let legalURLCharactersToBeEscaped: CFStringRef = ":/?&=;+!@#$()',*"
-    return CFURLCreateStringByAddingPercentEscapes(nil, string, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue)
+    return CFURLCreateStringByAddingPercentEscapes(nil, string, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue) as String
   }
 
   private class func doRequest(url: String, params: [String: String], success: NSDictionary -> ()) {
@@ -318,7 +318,7 @@ class GooglePlacesRequestHelpers {
       data,
       options: NSJSONReadingOptions.MutableContainers,
       error: &serializationError
-      ) as NSDictionary
+      ) as! NSDictionary
 
     if let error = serializationError {
       println("GooglePlaces Error: \(error.localizedDescription)")
