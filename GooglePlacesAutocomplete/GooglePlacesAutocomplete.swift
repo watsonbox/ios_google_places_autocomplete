@@ -71,13 +71,13 @@ public class PlaceDetails: Printable {
   public let raw: [String: AnyObject]
 
   public struct Point {
-    let latitude: Double
-    let longitude: Double
+    public let latitude: Double
+    public let longitude: Double
   }
 
   public struct Viewport {
-    let northEast: Point
-    let southWest: Point
+    public let northEast: Point
+    public let southWest: Point
   }
 
   public init(json: [String: AnyObject]) {
