@@ -125,6 +125,11 @@ public class GooglePlacesAutocomplete: UINavigationController {
   func close() {
     placeDelegate?.placeViewClosed?()
   }
+
+  public func reset() {
+    gpaViewController.searchBar.text = ""
+    gpaViewController.searchBar(gpaViewController.searchBar, textDidChange: "")
+  }
 }
 
 // MARK: - GooglePlacesAutocompleteContainer
