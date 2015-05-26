@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "GooglePlacesAutocomplete"
-  spec.version = "0.2.0"
+  spec.version = "0.2.1"
   spec.summary = "Simple Google Places autocompleting address entry view"
   spec.homepage = "https://github.com/watsonbox/ios_google_places_autocomplete"
   spec.screenshots = "https://raw.githubusercontent.com/watsonbox/ios_google_places_autocomplete/master/Screenshots/view.png", "https://raw.githubusercontent.com/watsonbox/ios_google_places_autocomplete/master/Screenshots/search.png"
