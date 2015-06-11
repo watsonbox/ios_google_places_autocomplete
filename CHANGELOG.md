@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.2.1 - 2015-05-26
+
+  - Allow programmatic clearing of search bar
+  - Add proxy access to container navigationItem for easier styling
+
 ## 0.2.0 - 2015-04-02
 
   - Change close button style

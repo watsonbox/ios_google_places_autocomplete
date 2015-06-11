@@ -96,6 +96,11 @@ public class GooglePlacesAutocomplete: UINavigationController {
   public var gpaViewController: GooglePlacesAutocompleteContainer!
   public var closeButton: UIBarButtonItem!
 
+  // Proxy access to container navigationItem
+  public override var navigationItem: UINavigationItem {
+    get { return gpaViewController.navigationItem }
+  }
+
   public var placeDelegate: GooglePlacesAutocompleteDelegate? {
     get { return gpaViewController.delegate }
     set { gpaViewController.delegate = newValue }
@@ -119,6 +124,11 @@ public class GooglePlacesAutocomplete: UINavigationController {
 
   func close() {
     placeDelegate?.placeViewClosed?()
+  }
+
+  public func reset() {
+    gpaViewController.searchBar.text = ""
+    gpaViewController.searchBar(gpaViewController.searchBar, textDidChange: "")
   }
 }
 

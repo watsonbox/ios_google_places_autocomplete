@@ -142,6 +142,14 @@ gpaViewController.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFo
   </td>
 </table>
 
+Also, to change the contents of the title bar:
+
+```swift
+gpaViewController.navigationItem.title = "Enter City"
+gpaViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: gpaViewController, action: "close")
+```
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/watsonbox/ios-google-places-autocomplete/fork )
