@@ -35,7 +35,7 @@ class GooglePlaceDetailsRequestTests: XCTestCase {
     let expectation = self.expectationWithDescription("Should return details")
 
     OHHTTPStubs.stubRequestsPassingTest({ (request: NSURLRequest!) -> Bool in
-      return request.URL.absoluteString == "https://maps.googleapis.com/maps/api/place/details/json?key=APIKEY&placeid=\(place.id)"
+      return request.URL!.absoluteString == "https://maps.googleapis.com/maps/api/place/details/json?key=APIKEY&placeid=\(place.id)"
       }, withStubResponse: { (request: NSURLRequest!) -> OHHTTPStubsResponse in
         return OHHTTPStubsResponse(JSONObject: self.json, statusCode: 200, headers: nil)
     })
