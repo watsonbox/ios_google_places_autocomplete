@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.0 - 2015-06-11
+
+  - Now compatible with XCode 6.2+ and Swift 1.2
+
 ## 0.2.1 - 2015-05-26
 
   - Allow programmatic clearing of search bar
