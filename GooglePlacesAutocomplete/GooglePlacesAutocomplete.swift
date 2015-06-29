@@ -8,6 +8,22 @@
 
 import UIKit
 
+public struct LocationBias {
+  public let latitude: Double
+  public let longitude: Double
+  public let radius: Int
+  
+  public init(latitude: Double = 0, longitude: Double = 0, radius: Int = 20000000) {
+    self.latitude = latitude
+    self.longitude = longitude
+    self.radius = radius
+  }
+  
+  public var location: String {
+    return "\(latitude),\(longitude)"
+  }
+}
+
 public enum PlaceType: Printable {
   case All
   case Geocode
@@ -105,6 +121,11 @@ public class GooglePlacesAutocomplete: UINavigationController {
     get { return gpaViewController.delegate }
     set { gpaViewController.delegate = newValue }
   }
+  
+  public var locationBias: LocationBias? {
+    get { return gpaViewController.locationBias }
+    set { gpaViewController.locationBias = newValue }
+  }
 
   public convenience init(apiKey: String, placeType: PlaceType = .All) {
     let gpaViewController = GooglePlacesAutocompleteContainer(
@@ -142,6 +163,7 @@ public class GooglePlacesAutocompleteContainer: UIViewController {
   var apiKey: String?
   var places = [Place]()
   var placeType: PlaceType = .All
+  var locationBias: LocationBias?
 
   convenience init(apiKey: String, placeType: PlaceType = .All) {
     let bundle = NSBundle(forClass: GooglePlacesAutocompleteContainer.self)
@@ -229,13 +251,20 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
     :param: searchString The search query
   */
   private func getPlaces(searchString: String) {
+    var params = [
+      "input": searchString,
+      "types": placeType.description,
+      "key": apiKey ?? ""
+    ]
+    
+    if let bias = locationBias {
+      params["location"] = bias.location
+      params["radius"] = bias.radius.description
+    }
+    
     GooglePlacesRequestHelpers.doRequest(
       "https://maps.googleapis.com/maps/api/place/autocomplete/json",
-      params: [
-        "input": searchString,
-        "types": placeType.description,
-        "key": apiKey ?? ""
-      ]
+      params: params
     ) { json in
       if let predictions = json["predictions"] as? Array<[String: AnyObject]> {
         self.places = predictions.map { (prediction: [String: AnyObject]) -> Place in

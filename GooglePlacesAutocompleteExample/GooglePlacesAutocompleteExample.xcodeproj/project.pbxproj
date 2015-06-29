@@ -18,6 +18,7 @@
 		1E6140921A90DD2800FAB3D1 /* GooglePlacesAutocompleteExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6140911A90DD2800FAB3D1 /* GooglePlacesAutocompleteExampleTests.swift */; };
 		1E61409C1A90DE1A00FAB3D1 /* GooglePlacesAutocomplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E61409B1A90DE1A00FAB3D1 /* GooglePlacesAutocomplete.framework */; };
 		1ECA5AA41AC2D2EE00D88B02 /* GooglePlaceDetailsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA5AA31AC2D2EE00D88B02 /* GooglePlaceDetailsRequestTests.swift */; };
+		1ECCB58A1B417714005A1DA4 /* LocationBiasRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECCB5891B417714005A1DA4 /* LocationBiasRequestTests.swift */; };
 		42DF8EA36CA91F40411D69DE /* libPods-GooglePlacesAutocompleteExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDDDD14DA780500672CE71A /* libPods-GooglePlacesAutocompleteExampleTests.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		1E61409B1A90DE1A00FAB3D1 /* GooglePlacesAutocomplete.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlacesAutocomplete.framework; path = "../../../../Users/hwilson/Library/Developer/Xcode/DerivedData/GooglePlacesAutocomplete-bavkkujmhijgoggouybocjggndqs/Build/Products/Debug-iphoneos/GooglePlacesAutocomplete.framework"; sourceTree = "<group>"; };
 		1E83234E1A923E5C002DB47B /* GooglePlacesAutocompleteExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GooglePlacesAutocompleteExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		1ECA5AA31AC2D2EE00D88B02 /* GooglePlaceDetailsRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlaceDetailsRequestTests.swift; sourceTree = "<group>"; };
+		1ECCB5891B417714005A1DA4 /* LocationBiasRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationBiasRequestTests.swift; sourceTree = "<group>"; };
 		2F91638A89D29443D66761B9 /* Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GooglePlacesAutocompleteExampleTests/Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BEDDDD14DA780500672CE71A /* libPods-GooglePlacesAutocompleteExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GooglePlacesAutocompleteExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C918C580C461E6F5D2DD4F16 /* Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GooglePlacesAutocompleteExampleTests/Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				1E61408F1A90DD2800FAB3D1 /* Supporting Files */,
 				1E83234E1A923E5C002DB47B /* GooglePlacesAutocompleteExample-Bridging-Header.h */,
 				1ECA5AA31AC2D2EE00D88B02 /* GooglePlaceDetailsRequestTests.swift */,
+				1ECCB5891B417714005A1DA4 /* LocationBiasRequestTests.swift */,
 			);
 			path = GooglePlacesAutocompleteExampleTests;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				1E57A40F1A90E70700E43270 /* AppDelegate.swift in Sources */,
 				1E57A40D1A90DFC000E43270 /* ViewController.swift in Sources */,
 				1E6140921A90DD2800FAB3D1 /* GooglePlacesAutocompleteExampleTests.swift in Sources */,
+				1ECCB58A1B417714005A1DA4 /* LocationBiasRequestTests.swift in Sources */,
 				1ECA5AA41AC2D2EE00D88B02 /* GooglePlaceDetailsRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
