@@ -124,6 +124,15 @@ place.getDetails { details in
 
 See the [documentation](https://developers.google.com/places/webservice/details#PlaceDetailsResponses) for full response details.
 
+### Location Biasing
+
+The Place Autocomplete API supports biasing results to a specified circle by passing a `location` and a `radius` parameter. This instructs the service to *prefer* showing results within that circle. Results outside of the defined area may still be displayed.
+
+```swift
+gpaViewController.locationBias = LocationBias(latitude: 48.8534275, longitude: 2.3582787999999937, radius: 1000)
+```
+
+
 ### Styling
 
 The UINavigationController appearance can also easily be changed, for example:
