@@ -1,7 +1,6 @@
 FRAMEWORK_SEARCH_PATHS = $(inherited) "$(SDKROOT)/Developer/Library/Frameworks" "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 FB_REFERENCE_IMAGE_DIR="\"$(SOURCE_ROOT)/../FBSnapshotTest/ReferenceImages\"" XCODE_VERSION=$(XCODE_VERSION_MAJOR)
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 FB_REFERENCE_IMAGE_DIR="\"$(SOURCE_ROOT)/../FBSnapshotTest/ReferenceImages\"" XCODE_VERSION=$(XCODE_VERSION_MAJOR) FB_REFERENCE_IMAGE_DIR="\"$(SOURCE_ROOT)/../FBSnapshotTest/ReferenceImages\""
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public/OHHTTPStubs"
 OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" -isystem "${PODS_ROOT}/Headers/Public/OHHTTPStubs"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-GooglePlacesAutocompleteExampleTests-FBSnapshotTestCase" -l"Pods-GooglePlacesAutocompleteExampleTests-OHHTTPStubs" -framework "CFNetwork" -framework "Foundation" -framework "XCTest"
-OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+OTHER_LDFLAGS = $(inherited) -ObjC -l"FBSnapshotTestCase" -l"OHHTTPStubs" -framework "CFNetwork" -framework "Foundation" -framework "XCTest"
 PODS_ROOT = ${SRCROOT}/../Pods
