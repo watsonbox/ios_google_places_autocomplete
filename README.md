@@ -65,6 +65,8 @@ Note: Don't forget to add the PoweredByGoogle image to your xcassets.
 
 ## Usage
 
+Use the [Google Developers Console](https://console.developers.google.com/) to enabled the 'Google Places API Web Service' and create a 'Server' API key credential. In both cases do *not* use the iOS options.
+
 ```swift
 import GooglePlacesAutocomplete // Not required when including source files directly in project
 
