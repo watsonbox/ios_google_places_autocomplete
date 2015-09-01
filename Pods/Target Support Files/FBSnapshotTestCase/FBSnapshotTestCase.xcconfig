@@ -1,3 +1,6 @@
-FBSNAPSHOTTESTCASE_FRAMEWORK_SEARCH_PATHS = $(inherited) "$(SDKROOT)/Developer/Library/Frameworks" "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-FBSNAPSHOTTESTCASE_GCC_PREPROCESSOR_DEFINITIONS = FB_REFERENCE_IMAGE_DIR="\"$(SOURCE_ROOT)/../FBSnapshotTest/ReferenceImages\""
-FBSNAPSHOTTESTCASE_OTHER_LDFLAGS = -framework "XCTest"
+FRAMEWORK_SEARCH_PATHS = $(inherited)  "$(SDKROOT)/Developer/Library/Frameworks" "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 FB_REFERENCE_IMAGE_DIR="\"$(SOURCE_ROOT)/../FBSnapshotTest/ReferenceImages\""
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public/OHHTTPStubs"
+OTHER_LDFLAGS = -framework "XCTest"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

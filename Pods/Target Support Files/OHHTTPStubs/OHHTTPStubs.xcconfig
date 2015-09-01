@@ -1,2 +1,5 @@
-OHHTTPSTUBS_GCC_PREPROCESSOR_DEFINITIONS = XCODE_VERSION=$(XCODE_VERSION_MAJOR)
-OHHTTPSTUBS_OTHER_LDFLAGS = -framework "CFNetwork" -framework "Foundation"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/OHHTTPStubs" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public/OHHTTPStubs"
+OTHER_LDFLAGS = -framework "CFNetwork" -framework "Foundation"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
