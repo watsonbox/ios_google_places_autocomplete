@@ -26,10 +26,10 @@ class ViewController: UIViewController {
 
 extension ViewController: GooglePlacesAutocompleteDelegate {
   func placeSelected(place: Place) {
-    println(place.description)
+    print(place.description)
 
     place.getDetails { details in
-      println(details)
+      print(details)
     }
   }
 
