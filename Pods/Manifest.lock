@@ -1,22 +1,22 @@
 PODS:
   - FBSnapshotTestCase (1.5)
-  - OHHTTPStubs (4.2.0):
-    - OHHTTPStubs/Default (= 4.2.0)
-  - OHHTTPStubs/Core (4.2.0)
-  - OHHTTPStubs/Default (4.2.0):
+  - OHHTTPStubs (4.3.0):
+    - OHHTTPStubs/Default (= 4.3.0)
+  - OHHTTPStubs/Core (4.3.0)
+  - OHHTTPStubs/Default (4.3.0):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (4.2.0):
+  - OHHTTPStubs/JSON (4.3.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (4.2.0):
+  - OHHTTPStubs/NSURLSession (4.3.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (4.2.0)
+  - OHHTTPStubs/OHPathHelpers (4.3.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (from `https://github.com/delannoyk/ios-snapshot-test-case`)
-  - OHHTTPStubs
+  - OHHTTPStubs (~> 4.3)
 
 EXTERNAL SOURCES:
   FBSnapshotTestCase:
@@ -29,6 +29,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 955cbc146cec727363951e3eab634c4e658cedb7
-  OHHTTPStubs: f639130b83fb5f4f022d38f841141b0a6fa77249
+  OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
 
-COCOAPODS: 0.39.0.beta.3
+COCOAPODS: 0.39.0

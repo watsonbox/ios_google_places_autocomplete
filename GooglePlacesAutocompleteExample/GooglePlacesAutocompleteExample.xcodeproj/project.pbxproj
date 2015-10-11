@@ -19,7 +19,7 @@
 		1E61409C1A90DE1A00FAB3D1 /* GooglePlacesAutocomplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E61409B1A90DE1A00FAB3D1 /* GooglePlacesAutocomplete.framework */; };
 		1ECA5AA41AC2D2EE00D88B02 /* GooglePlaceDetailsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA5AA31AC2D2EE00D88B02 /* GooglePlaceDetailsRequestTests.swift */; };
 		1ECCB58A1B417714005A1DA4 /* LocationBiasRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECCB5891B417714005A1DA4 /* LocationBiasRequestTests.swift */; };
-		42DF8EA36CA91F40411D69DE /* libPods-GooglePlacesAutocompleteExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDDDD14DA780500672CE71A /* libPods-GooglePlacesAutocompleteExampleTests.a */; };
+		821D186E10D2ACD5261F158A /* Pods_GooglePlacesAutocompleteExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436559DCE0D251F36E30F803 /* Pods_GooglePlacesAutocompleteExampleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		1ECA5AA31AC2D2EE00D88B02 /* GooglePlaceDetailsRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlaceDetailsRequestTests.swift; sourceTree = "<group>"; };
 		1ECCB5891B417714005A1DA4 /* LocationBiasRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationBiasRequestTests.swift; sourceTree = "<group>"; };
 		2F91638A89D29443D66761B9 /* Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GooglePlacesAutocompleteExampleTests/Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BEDDDD14DA780500672CE71A /* libPods-GooglePlacesAutocompleteExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GooglePlacesAutocompleteExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		436559DCE0D251F36E30F803 /* Pods_GooglePlacesAutocompleteExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooglePlacesAutocompleteExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C918C580C461E6F5D2DD4F16 /* Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GooglePlacesAutocompleteExampleTests/Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42DF8EA36CA91F40411D69DE /* libPods-GooglePlacesAutocompleteExampleTests.a in Frameworks */,
+				821D186E10D2ACD5261F158A /* Pods_GooglePlacesAutocompleteExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				1E61409B1A90DE1A00FAB3D1 /* GooglePlacesAutocomplete.framework */,
-				BEDDDD14DA780500672CE71A /* libPods-GooglePlacesAutocompleteExampleTests.a */,
+				436559DCE0D251F36E30F803 /* Pods_GooglePlacesAutocompleteExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,6 +182,7 @@
 				1E6140881A90DD2800FAB3D1 /* Frameworks */,
 				1E6140891A90DD2800FAB3D1 /* Resources */,
 				CE2A508019ADB10651EE79D3 /* Copy Pods Resources */,
+				910AC6A366E916701F6F866A /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,6 +268,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		910AC6A366E916701F6F866A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-GooglePlacesAutocompleteExampleTests/Pods-GooglePlacesAutocompleteExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE2A508019ADB10651EE79D3 /* Copy Pods Resources */ = {
@@ -445,10 +461,6 @@
 			baseConfigurationReference = 2F91638A89D29443D66761B9 /* Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -467,10 +479,6 @@
 			baseConfigurationReference = C918C580C461E6F5D2DD4F16 /* Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = GooglePlacesAutocompleteExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.watsonbox.$(PRODUCT_NAME:rfc1034identifier)";

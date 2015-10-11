@@ -10,7 +10,6 @@
 		1E74A0E21A8E3C5C003C9173 /* GooglePlacesAutocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74A0E01A8E3C5C003C9173 /* GooglePlacesAutocomplete.swift */; };
 		1E74A0E31A8E3C5C003C9173 /* GooglePlacesAutocomplete.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E74A0E11A8E3C5C003C9173 /* GooglePlacesAutocomplete.xib */; };
 		1E74A0E51A8E404F003C9173 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E74A0E41A8E404F003C9173 /* Images.xcassets */; };
-		1E74A0E71A8E4E6E003C9173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74A0E61A8E4E6E003C9173 /* AppDelegate.swift */; };
 		1EC16D871A8E1D0100E0760A /* GooglePlacesAutocomplete.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC16D861A8E1D0100E0760A /* GooglePlacesAutocomplete.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EC16D8D1A8E1D0100E0760A /* GooglePlacesAutocomplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC16D811A8E1D0100E0760A /* GooglePlacesAutocomplete.framework */; };
 /* End PBXBuildFile section */
@@ -29,7 +28,6 @@
 		1E74A0E01A8E3C5C003C9173 /* GooglePlacesAutocomplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesAutocomplete.swift; sourceTree = "<group>"; };
 		1E74A0E11A8E3C5C003C9173 /* GooglePlacesAutocomplete.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GooglePlacesAutocomplete.xib; sourceTree = "<group>"; };
 		1E74A0E41A8E404F003C9173 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1E74A0E61A8E4E6E003C9173 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EC16D811A8E1D0100E0760A /* GooglePlacesAutocomplete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GooglePlacesAutocomplete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC16D851A8E1D0100E0760A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EC16D861A8E1D0100E0760A /* GooglePlacesAutocomplete.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlacesAutocomplete.h; sourceTree = "<group>"; };
@@ -81,9 +79,9 @@
 		1EC16D831A8E1D0100E0760A /* GooglePlacesAutocomplete */ = {
 			isa = PBXGroup;
 			children = (
+				1EC16D861A8E1D0100E0760A /* GooglePlacesAutocomplete.h */,
 				1E74A0E01A8E3C5C003C9173 /* GooglePlacesAutocomplete.swift */,
 				1E74A0E11A8E3C5C003C9173 /* GooglePlacesAutocomplete.xib */,
-				1EC16D861A8E1D0100E0760A /* GooglePlacesAutocomplete.h */,
 				1E74A0E41A8E404F003C9173 /* Images.xcassets */,
 				1EC16D841A8E1D0100E0760A /* Supporting Files */,
 			);
@@ -102,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				1EC16D911A8E1D0100E0760A /* Supporting Files */,
-				1E74A0E61A8E4E6E003C9173 /* AppDelegate.swift */,
 			);
 			path = GooglePlacesAutocompleteTests;
 			sourceTree = "<group>";
@@ -242,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E74A0E71A8E4E6E003C9173 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +371,6 @@
 		1EC16D9B1A8E1D0100E0760A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -392,10 +384,6 @@
 		1EC16D9C1A8E1D0100E0760A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = GooglePlacesAutocompleteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

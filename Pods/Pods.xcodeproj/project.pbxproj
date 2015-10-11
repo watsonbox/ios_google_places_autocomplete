@@ -7,158 +7,191 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01C0C72108AAAD8134698337B69FCE74 /* OHPathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E35C5547D0246C24FCB70DCFFCB14 /* OHPathHelpers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0BF718C7D4B6E3EF89449B051D388081 /* OHHTTPStubs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031EA9773C4FB137B61ADF428A80BC9 /* OHHTTPStubs-dummy.m */; };
-		121A14AF2D721A555992A6D39753A8DF /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6143C147AF3E64F58EADC4D1CA7EA /* OHHTTPStubs.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		13977AA2FE68BF3D559F5CCE6B9C8B37 /* OHHTTPStubsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = FF88627A7514B864A52D4202CF2FA643 /* OHHTTPStubsResponse.h */; };
-		1E7EB618E7BD8BF5D7340B25A40C56B0 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = A4BDBDFE494A49E76D8C858159CC72A1 /* FBSnapshotTestController.h */; };
-		31BB91004931D8E0C0180B818F1C906F /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = A933DCEE8831F4A599769AFA94D25ED1 /* UIImage+Compare.h */; };
-		346546ACD7FB19B2A6042FA737BD07CC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84B6FD3181DE5306815F62516BD86A0 /* CFNetwork.framework */; };
-		3467D228978729DDD46075453F324A17 /* Compatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 0457B97867B93FB4A2FE5FBC7224A1BE /* Compatibility.h */; };
-		392D4461B5E4D4ED3407F090F5AC235B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050EA0EF0F01694FC3BE666F7E95EB26 /* Foundation.framework */; };
-		4A9CE8053A567817DC874E1B6D306044 /* OHHTTPStubsResponse+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = ECC64B3262DA2CE3D8C7809AAB4B9AF1 /* OHHTTPStubsResponse+JSON.h */; };
-		529F3D91DED232A8F95546828C790AA8 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7036363214BDF1A5DB6825C0BBDC2F /* UIImage+Compare.m */; };
-		52AD270BE87801C6A9563BFF5AB21E01 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1C702E22BC7A9A4D507294F6C12493 /* FBSnapshotTestCase.h */; };
-		5E62B7D10DE8C43927D1DF2B851F3A2C /* OHHTTPStubs.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E3BF3E8E8B34660616676869E051BF /* OHHTTPStubs.h */; };
-		7674634798781F2875E97E1D1F582668 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CE84BDB6CD208C5AF094A8F57F0A0 /* OHHTTPStubs+NSURLSessionConfiguration.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		88F37F774EEA214747C9667FEC20EB8A /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8332C2ACCE51107675053C5A75BF0794 /* OHHTTPStubsResponse+JSON.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		968E3F5C5BE7A5A5C9246FB2EA307FC8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9340BC94C4262C4EC7DEC672289BBBF /* XCTest.framework */; };
-		9E30A76B293C0F9A525E345165B45130 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050EA0EF0F01694FC3BE666F7E95EB26 /* Foundation.framework */; };
-		9EEBBD8A368DD31D2F4FC5AE982EAB1D /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A7C221A4314CC9668A4C9961E56EE /* OHHTTPStubsResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AA6C4802ECA51DFBC185273B61AED844 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD89289896A582EBA8BF9AEEE9A056 /* FBSnapshotTestController.m */; };
-		B6E1D382EBCB4082A5D630604757BD95 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE814064BCCB43920956B348D2C30B20 /* FBSnapshotTestCase-dummy.m */; };
-		BF5F17EDB76A75E7DD098E77FF118CF1 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = D90C6C914FBB25D5EB426A2F19F78AB8 /* UIImage+Diff.h */; };
-		CB168CCAB931FAC2A9F09DD65E263000 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 447799CFC9ABD4046DF6DD70D0BD3BDE /* UIImage+Diff.m */; };
-		D641DB05B2B5446A3AC28C25718A3111 /* OHPathHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 640F84885280D669F50A3291FED5FBFC /* OHPathHelpers.h */; };
-		DB1CEE161F2EB83C0A4058AF584D4388 /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C261043A31234F0EE9051B3CBFC2D /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m */; };
-		EA47678ED6EF773F2C7C0144A037D093 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050EA0EF0F01694FC3BE666F7E95EB26 /* Foundation.framework */; };
-		EAD63CDBA062B41776F64B8351B6300A /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BECA9881E6C4D1540EBB560D070AD41 /* FBSnapshotTestCase.m */; };
+		12D2F7AA45E613F050F3BF2F39BBA47B /* OHHTTPStubsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09872C25180CAD0D27D06F5C8FBD9CEF /* OHHTTPStubsResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13C23BB59AE113C00770245F2682576B /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F41BA5D03008698F513482A2FB28AEF2 /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m */; };
+		2575647F2F7CA3530F6B7A57ECEAA360 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97698CB6AA4D0D9F78B96C237D232E20 /* Foundation.framework */; };
+		28C418C22F745882D869A7970192D116 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97698CB6AA4D0D9F78B96C237D232E20 /* Foundation.framework */; };
+		32A59DBF168A9B955C020B5719EBCB0D /* OHHTTPStubsResponse+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = D783034056C122AC44B7E4A2B89C7620 /* OHHTTPStubsResponse+JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33CF8828DAEF041D4B239FE98C91AD3E /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 70782182586738EC6B41937A5EBC464C /* OHHTTPStubs+NSURLSessionConfiguration.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		387B673926C97011BC576EC8064530A6 /* OHHTTPStubs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D490F1AE7D665D7EFE9317379232E0B2 /* OHHTTPStubs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB282B2D51EB48401D7C49C34966AC4 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 737C612437C60B9559F95F6B4C7D2163 /* FBSnapshotTestCase.m */; };
+		5BA23C0B4BFA19C201419BB335E8D1DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97698CB6AA4D0D9F78B96C237D232E20 /* Foundation.framework */; };
+		61AF933531AAF1D7460C55953A17A101 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160199EED529A984183D4ECEBB95A7C0 /* XCTest.framework */; };
+		623FD70CADFD4593E65178BBAD28298E /* OHHTTPStubs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1CBBED74215C3C195C4018E583C5C1 /* OHHTTPStubs-dummy.m */; };
+		69A68048D65878897598D92851C0288D /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46684DC79027B8534516ABC0D7E6E813 /* FBSnapshotTestController.m */; };
+		6A19F46926C0533EF3FB292EFF850F74 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A8EEE33672CE61548BF010C68B0F /* UIImage+Compare.m */; };
+		6B1C00F3DED5CA430DAD920B385B2E33 /* OHPathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC66F2C8F8BC3548A622AA116AF911 /* OHPathHelpers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6D9691E69CF895B49E2F2AACCE246A29 /* Pods-GooglePlacesAutocompleteExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B3453B68B7CBCCE5BC4B80FD5F290104 /* Pods-GooglePlacesAutocompleteExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D13F720EC7B092140E0BC0F24136DFF /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E8D7197509CB5F690F7307651F805AE /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		876EDA2433FA95337E2D771F302C5203 /* OHHTTPStubs.h in Headers */ = {isa = PBXBuildFile; fileRef = EEF49A23150EB21DFEE549B4A45FB5D7 /* OHHTTPStubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DBC3ACF0577ECF0FCFC7E6050FF57BB /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A33DED8CF851E6C262BB85311429E4F /* UIImage+Diff.m */; };
+		925CF11DA1371D1B750B04C443F48462 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42597139F33917EEA8A1B8C512765920 /* CFNetwork.framework */; };
+		A194DEE96E5D5C9D61FD6CFCB61E91BD /* Compatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = D57383844EA76680094BE368FB0BEE26 /* Compatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A30DD407726FC3E9435B692B31A40978 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A0AF87D87B402CD159A74C0892CEE3B0 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6CCC994A5541AB7ADE2DA96E90CC702 /* OHPathHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = A60B93EA8CFE4AE075BA483BA0FC5183 /* OHPathHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A76AEB3A7AF38E33038FE892B896181A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 47D6E9BC3B3A09003C9138462F732F8C /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B29A7FAB531108A95C24E8399E6BD131 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCDCEF4E89E7144F7682B9F0A4E3B /* FBSnapshotTestCase-dummy.m */; };
+		C331F4CD251C22970EB86DCE1DF7F794 /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 63644DA42B561EF2E519ABECBEBA2C81 /* OHHTTPStubsResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C389FFA87F93E31092521DC1BED68D66 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = C46BA3BE8186EEC1DD232B8F0247E97A /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6EFBAA1A38DE58E410535F2EB4CA07F /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B83A43B8B09A01E543FE0BA8741D557 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8E7CCF090EC2EB4E3C29D2954D21F17 /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 53740B85F878A9A23F29BC7DD6D6A89B /* OHHTTPStubs.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F21D0F96BA6EDE58E4F70E83568E07D5 /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C168C9FC18B6663B80CD8E6DFCEB722E /* OHHTTPStubsResponse+JSON.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BE8D66ADAB0EA4F5E945102817C53466 /* PBXContainerItemProxy */ = {
+		198C00B5A3A4C5C8435348A43E0664DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5E558DBB1194A13611F0FED2998FFFF2;
+			remoteGlobalIDString = B9F753D23B3A010D0E2EB0AE0405D595;
 			remoteInfo = OHHTTPStubs;
 		};
-		C52074A993800FE7AB818789E7599038 /* PBXContainerItemProxy */ = {
+		CABBA39175EE6971E1B695BC86DD871C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7743A4BEACB44A97967B4298BC2A1619;
+			remoteGlobalIDString = 4D2FB1F029DE25C9938F468997C48C44;
 			remoteInfo = FBSnapshotTestCase;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0108AAFBEBD71D063FBC785A23366BB8 /* libFBSnapshotTestCase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFBSnapshotTestCase.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0457B97867B93FB4A2FE5FBC7224A1BE /* Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Compatibility.h; path = OHHTTPStubs/Sources/Compatibility.h; sourceTree = "<group>"; };
-		050EA0EF0F01694FC3BE666F7E95EB26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		2031EA9773C4FB137B61ADF428A80BC9 /* OHHTTPStubs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs-dummy.m"; sourceTree = "<group>"; };
-		2158774FA44C04B828E62F1744E57829 /* Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D1C702E22BC7A9A4D507294F6C12493 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		3EB7D081E5122416499B422AFAD7653A /* OHHTTPStubs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OHHTTPStubs.xcconfig; sourceTree = "<group>"; };
-		447799CFC9ABD4046DF6DD70D0BD3BDE /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Diff.m"; sourceTree = "<group>"; };
-		4BECA9881E6C4D1540EBB560D070AD41 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		50BD89289896A582EBA8BF9AEEE9A056 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotTestController.m; sourceTree = "<group>"; };
-		640F84885280D669F50A3291FED5FBFC /* OHPathHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHPathHelpers.h; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.h; sourceTree = "<group>"; };
-		666CE84BDB6CD208C5AF094A8F57F0A0 /* OHHTTPStubs+NSURLSessionConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubs+NSURLSessionConfiguration.m"; path = "OHHTTPStubs/Sources/NSURLSession/OHHTTPStubs+NSURLSessionConfiguration.m"; sourceTree = "<group>"; };
-		685A347950A8FFC395096C33F0CBABE2 /* Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6F7036363214BDF1A5DB6825C0BBDC2F /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compare.m"; sourceTree = "<group>"; };
-		7020BF6C2190D6C1D41215F59ACE8634 /* Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		708E35C5547D0246C24FCB70DCFFCB14 /* OHPathHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHPathHelpers.m; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.m; sourceTree = "<group>"; };
-		8332C2ACCE51107675053C5A75BF0794 /* OHHTTPStubsResponse+JSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubsResponse+JSON.m"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.m"; sourceTree = "<group>"; };
-		8DA6143C147AF3E64F58EADC4D1CA7EA /* OHHTTPStubs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubs.m; path = OHHTTPStubs/Sources/OHHTTPStubs.m; sourceTree = "<group>"; };
-		9CDC6BA4CD97DA8F55C795E91BFDB5A6 /* Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A2A73E6034AC4D3F62B1ACEC7B408503 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
-		A4BDBDFE494A49E76D8C858159CC72A1 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotTestController.h; sourceTree = "<group>"; };
-		A933DCEE8831F4A599769AFA94D25ED1 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compare.h"; sourceTree = "<group>"; };
-		A93AD53CB653D29E24B2C74C44496DF6 /* libPods-GooglePlacesAutocompleteExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GooglePlacesAutocompleteExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD18FF23D20BF1B1EEB07EEF9579F5E5 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
-		AD6C261043A31234F0EE9051B3CBFC2D /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GooglePlacesAutocompleteExampleTests-dummy.m"; sourceTree = "<group>"; };
-		B7E3BF3E8E8B34660616676869E051BF /* OHHTTPStubs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubs.h; path = OHHTTPStubs/Sources/OHHTTPStubs.h; sourceTree = "<group>"; };
+		00AC66F2C8F8BC3548A622AA116AF911 /* OHPathHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHPathHelpers.m; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.m; sourceTree = "<group>"; };
+		09872C25180CAD0D27D06F5C8FBD9CEF /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubsResponse.h; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.h; sourceTree = "<group>"; };
+		0B83A43B8B09A01E543FE0BA8741D557 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
+		102802978A864E3AAB36695B49D8A57B /* OHHTTPStubs-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-prefix.pch"; sourceTree = "<group>"; };
+		160199EED529A984183D4ECEBB95A7C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1A33DED8CF851E6C262BB85311429E4F /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Diff.m"; sourceTree = "<group>"; };
+		1A642D5F9FD948C3EDA30D1A8BBDBED1 /* Pods-GooglePlacesAutocompleteExampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GooglePlacesAutocompleteExampleTests-frameworks.sh"; sourceTree = "<group>"; };
+		42597139F33917EEA8A1B8C512765920 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		46684DC79027B8534516ABC0D7E6E813 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotTestController.m; sourceTree = "<group>"; };
+		47D6E9BC3B3A09003C9138462F732F8C /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotTestController.h; sourceTree = "<group>"; };
+		509567CA7845A8A2B3A79B85D3412757 /* Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		53740B85F878A9A23F29BC7DD6D6A89B /* OHHTTPStubs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubs.m; path = OHHTTPStubs/Sources/OHHTTPStubs.m; sourceTree = "<group>"; };
+		5B8BF92DE131F276D259ACF8075CBF1D /* Pods-GooglePlacesAutocompleteExampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GooglePlacesAutocompleteExampleTests.modulemap"; sourceTree = "<group>"; };
+		63644DA42B561EF2E519ABECBEBA2C81 /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubsResponse.m; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.m; sourceTree = "<group>"; };
+		6984272489AD368EACAFE27E78529156 /* Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		6F722DF926FDC880D1872879F76BAA06 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70782182586738EC6B41937A5EBC464C /* OHHTTPStubs+NSURLSessionConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubs+NSURLSessionConfiguration.m"; path = "OHHTTPStubs/Sources/NSURLSession/OHHTTPStubs+NSURLSessionConfiguration.m"; sourceTree = "<group>"; };
+		737C612437C60B9559F95F6B4C7D2163 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotTestCase.m; sourceTree = "<group>"; };
+		7D3F12029F287973F000D43F7C686893 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A93A8EEE33672CE61548BF010C68B0F /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compare.m"; sourceTree = "<group>"; };
+		8BB2C6F6F2780D4961B53D5907CF7B02 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92CBCDCEF4E89E7144F7682B9F0A4E3B /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		944CD9D559DCCC35C58BF11F42A94451 /* Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		97698CB6AA4D0D9F78B96C237D232E20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9937FF7184914E177B39F7EE3B59DB28 /* Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BF016B7A9B880D08EE97275D07D4391 /* Pods-GooglePlacesAutocompleteExampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GooglePlacesAutocompleteExampleTests-resources.sh"; sourceTree = "<group>"; };
+		9E8D7197509CB5F690F7307651F805AE /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compare.h"; sourceTree = "<group>"; };
+		A0AF87D87B402CD159A74C0892CEE3B0 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotTestCase.h; sourceTree = "<group>"; };
+		A60B93EA8CFE4AE075BA483BA0FC5183 /* OHPathHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHPathHelpers.h; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.h; sourceTree = "<group>"; };
+		AB93D1ACF928D4E0A5BDC26BBE6C54FB /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		AF3BC5BAAD81407D883A23A84A6E24BE /* OHHTTPStubs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OHHTTPStubs.xcconfig; sourceTree = "<group>"; };
+		B3453B68B7CBCCE5BC4B80FD5F290104 /* Pods-GooglePlacesAutocompleteExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GooglePlacesAutocompleteExampleTests-umbrella.h"; sourceTree = "<group>"; };
+		B3688CD1E84F6FAE6C895F221BF21BAB /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
+		B3F91D9E5D062D17DB8E82F35B99DB38 /* Pods_GooglePlacesAutocompleteExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooglePlacesAutocompleteExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C84B6FD3181DE5306815F62516BD86A0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		D90C6C914FBB25D5EB426A2F19F78AB8 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Diff.h"; sourceTree = "<group>"; };
-		D9A61E929141EBDBC40D3C6E2A2F73B3 /* libOHHTTPStubs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOHHTTPStubs.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E41A7C221A4314CC9668A4C9961E56EE /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubsResponse.m; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.m; sourceTree = "<group>"; };
-		E5A5985C3944F85BE8C2275F22362C3D /* Pods-GooglePlacesAutocompleteExampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GooglePlacesAutocompleteExampleTests-resources.sh"; sourceTree = "<group>"; };
-		E785232731B576DE338557354A838E5F /* OHHTTPStubs-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-prefix.pch"; sourceTree = "<group>"; };
-		ECC64B3262DA2CE3D8C7809AAB4B9AF1 /* OHHTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OHHTTPStubsResponse+JSON.h"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
-		F9340BC94C4262C4EC7DEC672289BBBF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		FE814064BCCB43920956B348D2C30B20 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		FF88627A7514B864A52D4202CF2FA643 /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubsResponse.h; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.h; sourceTree = "<group>"; };
-		FFD78A624F0DF1D634B0EC0BDBACAA9E /* Pods-GooglePlacesAutocompleteExampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GooglePlacesAutocompleteExampleTests-frameworks.sh"; sourceTree = "<group>"; };
+		BE6F03B5610323BD62BDA61F4BE2A7A0 /* OHHTTPStubs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = OHHTTPStubs.modulemap; sourceTree = "<group>"; };
+		C168C9FC18B6663B80CD8E6DFCEB722E /* OHHTTPStubsResponse+JSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubsResponse+JSON.m"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.m"; sourceTree = "<group>"; };
+		C46BA3BE8186EEC1DD232B8F0247E97A /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Diff.h"; sourceTree = "<group>"; };
+		D490F1AE7D665D7EFE9317379232E0B2 /* OHHTTPStubs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-umbrella.h"; sourceTree = "<group>"; };
+		D57383844EA76680094BE368FB0BEE26 /* Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Compatibility.h; path = OHHTTPStubs/Sources/Compatibility.h; sourceTree = "<group>"; };
+		D783034056C122AC44B7E4A2B89C7620 /* OHHTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OHHTTPStubsResponse+JSON.h"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
+		DA1CBBED74215C3C195C4018E583C5C1 /* OHHTTPStubs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs-dummy.m"; sourceTree = "<group>"; };
+		E2607BBE165DAA3F2DB91AE68E11895F /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6BE42E8731769CBA68EDD96361AB7CB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9333300B2F8147D073836FB0F6BA79A /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		EEF49A23150EB21DFEE549B4A45FB5D7 /* OHHTTPStubs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubs.h; path = OHHTTPStubs/Sources/OHHTTPStubs.h; sourceTree = "<group>"; };
+		F41BA5D03008698F513482A2FB28AEF2 /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GooglePlacesAutocompleteExampleTests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		499887419CF9A7B39E2B13E4CE958D65 /* Frameworks */ = {
+		6744A247537D45409984B9D34F4395FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				392D4461B5E4D4ED3407F090F5AC235B /* Foundation.framework in Frameworks */,
-				968E3F5C5BE7A5A5C9246FB2EA307FC8 /* XCTest.framework in Frameworks */,
+				5BA23C0B4BFA19C201419BB335E8D1DF /* Foundation.framework in Frameworks */,
+				61AF933531AAF1D7460C55953A17A101 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E58478B0062439EF698853A65D42263 /* Frameworks */ = {
+		CCD8ED325890826D644F2F75AA25875B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA47678ED6EF773F2C7C0144A037D093 /* Foundation.framework in Frameworks */,
+				2575647F2F7CA3530F6B7A57ECEAA360 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC4F748135BE526181428C0ED041FE47 /* Frameworks */ = {
+		E6EF2F6AB2EC7AF7DA9DB4C3F2C450AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				346546ACD7FB19B2A6042FA737BD07CC /* CFNetwork.framework in Frameworks */,
-				9E30A76B293C0F9A525E345165B45130 /* Foundation.framework in Frameworks */,
+				925CF11DA1371D1B750B04C443F48462 /* CFNetwork.framework in Frameworks */,
+				28C418C22F745882D869A7970192D116 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10CAEB8921AF142091A62DEC6C375F31 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				C84B6FD3181DE5306815F62516BD86A0 /* CFNetwork.framework */,
-				050EA0EF0F01694FC3BE666F7E95EB26 /* Foundation.framework */,
-				F9340BC94C4262C4EC7DEC672289BBBF /* XCTest.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10CAEB8921AF142091A62DEC6C375F31 /* iOS */,
+				AC906379515062F98F6D053B0EC3975D /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2F6AFF9597059C81888FC657DA8EF161 /* JSON */ = {
+		2E3E16F5C6F14B1B39811AEC494647BB /* FBSnapshotTestCase */ = {
 			isa = PBXGroup;
 			children = (
-				ECC64B3262DA2CE3D8C7809AAB4B9AF1 /* OHHTTPStubsResponse+JSON.h */,
-				8332C2ACCE51107675053C5A75BF0794 /* OHHTTPStubsResponse+JSON.m */,
+				A0AF87D87B402CD159A74C0892CEE3B0 /* FBSnapshotTestCase.h */,
+				737C612437C60B9559F95F6B4C7D2163 /* FBSnapshotTestCase.m */,
+				47D6E9BC3B3A09003C9138462F732F8C /* FBSnapshotTestController.h */,
+				46684DC79027B8534516ABC0D7E6E813 /* FBSnapshotTestController.m */,
+				9E8D7197509CB5F690F7307651F805AE /* UIImage+Compare.h */,
+				8A93A8EEE33672CE61548BF010C68B0F /* UIImage+Compare.m */,
+				C46BA3BE8186EEC1DD232B8F0247E97A /* UIImage+Diff.h */,
+				1A33DED8CF851E6C262BB85311429E4F /* UIImage+Diff.m */,
+				AE0897B43AEE9C818043E41794F25E67 /* Support Files */,
+			);
+			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
+		3A9D4E965155321BBE5A996C5EBD192D /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D783034056C122AC44B7E4A2B89C7620 /* OHHTTPStubsResponse+JSON.h */,
+				C168C9FC18B6663B80CD8E6DFCEB722E /* OHHTTPStubsResponse+JSON.m */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
 		};
-		69A96AEB12C28D83B08B6336DE9DEF0B /* Support Files */ = {
+		4127A3FD5E4CE3EC44A2EFAC7BD9EFF6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3EB7D081E5122416499B422AFAD7653A /* OHHTTPStubs.xcconfig */,
-				2031EA9773C4FB137B61ADF428A80BC9 /* OHHTTPStubs-dummy.m */,
-				E785232731B576DE338557354A838E5F /* OHHTTPStubs-prefix.pch */,
+				60EB772DFD60AACE044BF17F1D66BDC6 /* Pods-GooglePlacesAutocompleteExampleTests */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/OHHTTPStubs";
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		60EB772DFD60AACE044BF17F1D66BDC6 /* Pods-GooglePlacesAutocompleteExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BB2C6F6F2780D4961B53D5907CF7B02 /* Info.plist */,
+				5B8BF92DE131F276D259ACF8075CBF1D /* Pods-GooglePlacesAutocompleteExampleTests.modulemap */,
+				944CD9D559DCCC35C58BF11F42A94451 /* Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.markdown */,
+				509567CA7845A8A2B3A79B85D3412757 /* Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.plist */,
+				F41BA5D03008698F513482A2FB28AEF2 /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m */,
+				1A642D5F9FD948C3EDA30D1A8BBDBED1 /* Pods-GooglePlacesAutocompleteExampleTests-frameworks.sh */,
+				9BF016B7A9B880D08EE97275D07D4391 /* Pods-GooglePlacesAutocompleteExampleTests-resources.sh */,
+				B3453B68B7CBCCE5BC4B80FD5F290104 /* Pods-GooglePlacesAutocompleteExampleTests-umbrella.h */,
+				9937FF7184914E177B39F7EE3B59DB28 /* Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig */,
+				6984272489AD368EACAFE27E78529156 /* Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig */,
+			);
+			name = "Pods-GooglePlacesAutocompleteExampleTests";
+			path = "Target Support Files/Pods-GooglePlacesAutocompleteExampleTests";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -167,192 +200,155 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				E2C7C7FE419561E68A7340837A156B97 /* Pods */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				E6F18219E127DAFE399372A3C41F7832 /* Targets Support Files */,
+				F2B8B76F225EAA0060EBA23C62B2D78E /* Products */,
+				4127A3FD5E4CE3EC44A2EFAC7BD9EFF6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E3F4300C890FC89E3BD1776436C915E /* Core */ = {
+		8E01727DA2A2169B919394F471F78BDF /* OHHTTPStubs */ = {
 			isa = PBXGroup;
 			children = (
-				0457B97867B93FB4A2FE5FBC7224A1BE /* Compatibility.h */,
-				B7E3BF3E8E8B34660616676869E051BF /* OHHTTPStubs.h */,
-				8DA6143C147AF3E64F58EADC4D1CA7EA /* OHHTTPStubs.m */,
-				FF88627A7514B864A52D4202CF2FA643 /* OHHTTPStubsResponse.h */,
-				E41A7C221A4314CC9668A4C9961E56EE /* OHHTTPStubsResponse.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		911CB05415A04534746F4FBF5F8D8504 /* FBSnapshotTestCase */ = {
-			isa = PBXGroup;
-			children = (
-				2D1C702E22BC7A9A4D507294F6C12493 /* FBSnapshotTestCase.h */,
-				4BECA9881E6C4D1540EBB560D070AD41 /* FBSnapshotTestCase.m */,
-				A4BDBDFE494A49E76D8C858159CC72A1 /* FBSnapshotTestController.h */,
-				50BD89289896A582EBA8BF9AEEE9A056 /* FBSnapshotTestController.m */,
-				A933DCEE8831F4A599769AFA94D25ED1 /* UIImage+Compare.h */,
-				6F7036363214BDF1A5DB6825C0BBDC2F /* UIImage+Compare.m */,
-				D90C6C914FBB25D5EB426A2F19F78AB8 /* UIImage+Diff.h */,
-				447799CFC9ABD4046DF6DD70D0BD3BDE /* UIImage+Diff.m */,
-				E66AE908FBE67FDD0F9B8F45A9FDFE07 /* Support Files */,
-			);
-			path = FBSnapshotTestCase;
-			sourceTree = "<group>";
-		};
-		97A72B626E2A324C925B8CCA9926CFFB /* NSURLSession */ = {
-			isa = PBXGroup;
-			children = (
-				666CE84BDB6CD208C5AF094A8F57F0A0 /* OHHTTPStubs+NSURLSessionConfiguration.m */,
-			);
-			name = NSURLSession;
-			sourceTree = "<group>";
-		};
-		A2F9A03135FBE3778CC6839210507840 /* OHPathHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				640F84885280D669F50A3291FED5FBFC /* OHPathHelpers.h */,
-				708E35C5547D0246C24FCB70DCFFCB14 /* OHPathHelpers.m */,
-			);
-			name = OHPathHelpers;
-			sourceTree = "<group>";
-		};
-		A9E30B64F2759341ED2B377D09208A63 /* OHHTTPStubs */ = {
-			isa = PBXGroup;
-			children = (
-				7E3F4300C890FC89E3BD1776436C915E /* Core */,
-				2F6AFF9597059C81888FC657DA8EF161 /* JSON */,
-				97A72B626E2A324C925B8CCA9926CFFB /* NSURLSession */,
-				A2F9A03135FBE3778CC6839210507840 /* OHPathHelpers */,
-				69A96AEB12C28D83B08B6336DE9DEF0B /* Support Files */,
+				90CE354D12EB7C009326042981630C9F /* Core */,
+				3A9D4E965155321BBE5A996C5EBD192D /* JSON */,
+				EA13D834F54E2C82501A2396271DDFEF /* NSURLSession */,
+				BE1EB13E1C8497F8E7B1E8D40F1A69AB /* OHPathHelpers */,
+				9F37EC29BE618CE3E51EFE2F3B082D0F /* Support Files */,
 			);
 			path = OHHTTPStubs;
 			sourceTree = "<group>";
 		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+		90CE354D12EB7C009326042981630C9F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0108AAFBEBD71D063FBC785A23366BB8 /* libFBSnapshotTestCase.a */,
-				D9A61E929141EBDBC40D3C6E2A2F73B3 /* libOHHTTPStubs.a */,
-				A93AD53CB653D29E24B2C74C44496DF6 /* libPods-GooglePlacesAutocompleteExampleTests.a */,
+				D57383844EA76680094BE368FB0BEE26 /* Compatibility.h */,
+				EEF49A23150EB21DFEE549B4A45FB5D7 /* OHHTTPStubs.h */,
+				53740B85F878A9A23F29BC7DD6D6A89B /* OHHTTPStubs.m */,
+				09872C25180CAD0D27D06F5C8FBD9CEF /* OHHTTPStubsResponse.h */,
+				63644DA42B561EF2E519ABECBEBA2C81 /* OHHTTPStubsResponse.m */,
 			);
-			name = Products;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		D012739C0224318DA42CAA2FB5F44F26 /* Pods-GooglePlacesAutocompleteExampleTests */ = {
+		9F37EC29BE618CE3E51EFE2F3B082D0F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				685A347950A8FFC395096C33F0CBABE2 /* Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.markdown */,
-				9CDC6BA4CD97DA8F55C795E91BFDB5A6 /* Pods-GooglePlacesAutocompleteExampleTests-acknowledgements.plist */,
-				AD6C261043A31234F0EE9051B3CBFC2D /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m */,
-				FFD78A624F0DF1D634B0EC0BDBACAA9E /* Pods-GooglePlacesAutocompleteExampleTests-frameworks.sh */,
-				E5A5985C3944F85BE8C2275F22362C3D /* Pods-GooglePlacesAutocompleteExampleTests-resources.sh */,
-				2158774FA44C04B828E62F1744E57829 /* Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig */,
-				7020BF6C2190D6C1D41215F59ACE8634 /* Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig */,
+				7D3F12029F287973F000D43F7C686893 /* Info.plist */,
+				BE6F03B5610323BD62BDA61F4BE2A7A0 /* OHHTTPStubs.modulemap */,
+				AF3BC5BAAD81407D883A23A84A6E24BE /* OHHTTPStubs.xcconfig */,
+				DA1CBBED74215C3C195C4018E583C5C1 /* OHHTTPStubs-dummy.m */,
+				102802978A864E3AAB36695B49D8A57B /* OHHTTPStubs-prefix.pch */,
+				D490F1AE7D665D7EFE9317379232E0B2 /* OHHTTPStubs-umbrella.h */,
 			);
-			name = "Pods-GooglePlacesAutocompleteExampleTests";
-			path = "Target Support Files/Pods-GooglePlacesAutocompleteExampleTests";
+			name = "Support Files";
+			path = "../Target Support Files/OHHTTPStubs";
 			sourceTree = "<group>";
 		};
-		E2C7C7FE419561E68A7340837A156B97 /* Pods */ = {
+		AC906379515062F98F6D053B0EC3975D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				911CB05415A04534746F4FBF5F8D8504 /* FBSnapshotTestCase */,
-				A9E30B64F2759341ED2B377D09208A63 /* OHHTTPStubs */,
+				42597139F33917EEA8A1B8C512765920 /* CFNetwork.framework */,
+				97698CB6AA4D0D9F78B96C237D232E20 /* Foundation.framework */,
+				160199EED529A984183D4ECEBB95A7C0 /* XCTest.framework */,
 			);
-			name = Pods;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		E66AE908FBE67FDD0F9B8F45A9FDFE07 /* Support Files */ = {
+		AE0897B43AEE9C818043E41794F25E67 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A2A73E6034AC4D3F62B1ACEC7B408503 /* FBSnapshotTestCase.xcconfig */,
-				FE814064BCCB43920956B348D2C30B20 /* FBSnapshotTestCase-dummy.m */,
-				AD18FF23D20BF1B1EEB07EEF9579F5E5 /* FBSnapshotTestCase-prefix.pch */,
+				AB93D1ACF928D4E0A5BDC26BBE6C54FB /* FBSnapshotTestCase.modulemap */,
+				B3688CD1E84F6FAE6C895F221BF21BAB /* FBSnapshotTestCase.xcconfig */,
+				92CBCDCEF4E89E7144F7682B9F0A4E3B /* FBSnapshotTestCase-dummy.m */,
+				E9333300B2F8147D073836FB0F6BA79A /* FBSnapshotTestCase-prefix.pch */,
+				0B83A43B8B09A01E543FE0BA8741D557 /* FBSnapshotTestCase-umbrella.h */,
+				E6BE42E8731769CBA68EDD96361AB7CB /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FBSnapshotTestCase";
 			sourceTree = "<group>";
 		};
-		E6F18219E127DAFE399372A3C41F7832 /* Targets Support Files */ = {
+		BE1EB13E1C8497F8E7B1E8D40F1A69AB /* OHPathHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				D012739C0224318DA42CAA2FB5F44F26 /* Pods-GooglePlacesAutocompleteExampleTests */,
+				A60B93EA8CFE4AE075BA483BA0FC5183 /* OHPathHelpers.h */,
+				00AC66F2C8F8BC3548A622AA116AF911 /* OHPathHelpers.m */,
 			);
-			name = "Targets Support Files";
+			name = OHPathHelpers;
+			sourceTree = "<group>";
+		};
+		E2C7C7FE419561E68A7340837A156B97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E3E16F5C6F14B1B39811AEC494647BB /* FBSnapshotTestCase */,
+				8E01727DA2A2169B919394F471F78BDF /* OHHTTPStubs */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA13D834F54E2C82501A2396271DDFEF /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				70782182586738EC6B41937A5EBC464C /* OHHTTPStubs+NSURLSessionConfiguration.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		F2B8B76F225EAA0060EBA23C62B2D78E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2607BBE165DAA3F2DB91AE68E11895F /* FBSnapshotTestCase.framework */,
+				6F722DF926FDC880D1872879F76BAA06 /* OHHTTPStubs.framework */,
+				B3F91D9E5D062D17DB8E82F35B99DB38 /* Pods_GooglePlacesAutocompleteExampleTests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F6EC17A146E79BCDB289D8A139B3C514 /* Headers */ = {
+		A0F21A24AD43FD1EB9F0E107CB175DEB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52AD270BE87801C6A9563BFF5AB21E01 /* FBSnapshotTestCase.h in Headers */,
-				1E7EB618E7BD8BF5D7340B25A40C56B0 /* FBSnapshotTestController.h in Headers */,
-				31BB91004931D8E0C0180B818F1C906F /* UIImage+Compare.h in Headers */,
-				BF5F17EDB76A75E7DD098E77FF118CF1 /* UIImage+Diff.h in Headers */,
+				6D9691E69CF895B49E2F2AACCE246A29 /* Pods-GooglePlacesAutocompleteExampleTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE3086E60598332DF1715D0BA289FB94 /* Headers */ = {
+		ABAB0D5A85C7037A9C0114BF313562DF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3467D228978729DDD46075453F324A17 /* Compatibility.h in Headers */,
-				5E62B7D10DE8C43927D1DF2B851F3A2C /* OHHTTPStubs.h in Headers */,
-				4A9CE8053A567817DC874E1B6D306044 /* OHHTTPStubsResponse+JSON.h in Headers */,
-				13977AA2FE68BF3D559F5CCE6B9C8B37 /* OHHTTPStubsResponse.h in Headers */,
-				D641DB05B2B5446A3AC28C25718A3111 /* OHPathHelpers.h in Headers */,
+				A194DEE96E5D5C9D61FD6CFCB61E91BD /* Compatibility.h in Headers */,
+				387B673926C97011BC576EC8064530A6 /* OHHTTPStubs-umbrella.h in Headers */,
+				876EDA2433FA95337E2D771F302C5203 /* OHHTTPStubs.h in Headers */,
+				32A59DBF168A9B955C020B5719EBCB0D /* OHHTTPStubsResponse+JSON.h in Headers */,
+				12D2F7AA45E613F050F3BF2F39BBA47B /* OHHTTPStubsResponse.h in Headers */,
+				A6CCC994A5541AB7ADE2DA96E90CC702 /* OHPathHelpers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F382B553069F53033AABC17791CDC92A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EFBAA1A38DE58E410535F2EB4CA07F /* FBSnapshotTestCase-umbrella.h in Headers */,
+				A30DD407726FC3E9435B692B31A40978 /* FBSnapshotTestCase.h in Headers */,
+				A76AEB3A7AF38E33038FE892B896181A /* FBSnapshotTestController.h in Headers */,
+				7D13F720EC7B092140E0BC0F24136DFF /* UIImage+Compare.h in Headers */,
+				C389FFA87F93E31092521DC1BED68D66 /* UIImage+Diff.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0CABE703B9B9CEB61C02883B717F30AB /* Pods-GooglePlacesAutocompleteExampleTests */ = {
+		4D2FB1F029DE25C9938F468997C48C44 /* FBSnapshotTestCase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D58000335AC7E18ECC68DDE8A15826A3 /* Build configuration list for PBXNativeTarget "Pods-GooglePlacesAutocompleteExampleTests" */;
+			buildConfigurationList = 59E707697B67013998417CACCE5A4B24 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */;
 			buildPhases = (
-				0C5D4BD5C432D6D96480E4906C9D6C1A /* Sources */,
-				5E58478B0062439EF698853A65D42263 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				820FF6D33563781B8032F3D3B3F21592 /* PBXTargetDependency */,
-				EFFEA9778FB9E4887CCF17D57D5975C1 /* PBXTargetDependency */,
-			);
-			name = "Pods-GooglePlacesAutocompleteExampleTests";
-			productName = "Pods-GooglePlacesAutocompleteExampleTests";
-			productReference = A93AD53CB653D29E24B2C74C44496DF6 /* libPods-GooglePlacesAutocompleteExampleTests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		5E558DBB1194A13611F0FED2998FFFF2 /* OHHTTPStubs */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 094F5720A07A08D87BF2B044498E2D68 /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */;
-			buildPhases = (
-				CF902DFDA00F3F2470703807B69F9646 /* Sources */,
-				DC4F748135BE526181428C0ED041FE47 /* Frameworks */,
-				FE3086E60598332DF1715D0BA289FB94 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OHHTTPStubs;
-			productName = OHHTTPStubs;
-			productReference = D9A61E929141EBDBC40D3C6E2A2F73B3 /* libOHHTTPStubs.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		7743A4BEACB44A97967B4298BC2A1619 /* FBSnapshotTestCase */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 13B9C41BF8645A679A01246358CA392C /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */;
-			buildPhases = (
-				994DFEA1E4C0EC0E50027B1E94CDA2EA /* Sources */,
-				499887419CF9A7B39E2B13E4CE958D65 /* Frameworks */,
-				F6EC17A146E79BCDB289D8A139B3C514 /* Headers */,
+				356BC8B441C56ABF5D2ADF9CE1B35CA7 /* Sources */,
+				6744A247537D45409984B9D34F4395FA /* Frameworks */,
+				F382B553069F53033AABC17791CDC92A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -360,8 +356,44 @@
 			);
 			name = FBSnapshotTestCase;
 			productName = FBSnapshotTestCase;
-			productReference = 0108AAFBEBD71D063FBC785A23366BB8 /* libFBSnapshotTestCase.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = E2607BBE165DAA3F2DB91AE68E11895F /* FBSnapshotTestCase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9F753D23B3A010D0E2EB0AE0405D595 /* OHHTTPStubs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDD79B3459C7CC393C8CD0CE59B61FE3 /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */;
+			buildPhases = (
+				79A6F07414E4CA3A22DFA1E74787A8C7 /* Sources */,
+				E6EF2F6AB2EC7AF7DA9DB4C3F2C450AF /* Frameworks */,
+				ABAB0D5A85C7037A9C0114BF313562DF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OHHTTPStubs;
+			productName = OHHTTPStubs;
+			productReference = 6F722DF926FDC880D1872879F76BAA06 /* OHHTTPStubs.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FD44B880A659A24DAD8487A085CA76D6 /* Pods-GooglePlacesAutocompleteExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 420F3F5BAB27684807225A6256CD3B4D /* Build configuration list for PBXNativeTarget "Pods-GooglePlacesAutocompleteExampleTests" */;
+			buildPhases = (
+				D7B739D372B1EF284814BF9B6591A11D /* Sources */,
+				CCD8ED325890826D644F2F75AA25875B /* Frameworks */,
+				A0F21A24AD43FD1EB9F0E107CB175DEB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076C9DF7933DEA32864C090202BE27D1 /* PBXTargetDependency */,
+				7797B224295632F82C98B76110CC8C11 /* PBXTargetDependency */,
+			);
+			name = "Pods-GooglePlacesAutocompleteExampleTests";
+			productName = "Pods-GooglePlacesAutocompleteExampleTests";
+			productReference = B3F91D9E5D062D17DB8E82F35B99DB38 /* Pods_GooglePlacesAutocompleteExampleTests.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -380,130 +412,150 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = F2B8B76F225EAA0060EBA23C62B2D78E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7743A4BEACB44A97967B4298BC2A1619 /* FBSnapshotTestCase */,
-				5E558DBB1194A13611F0FED2998FFFF2 /* OHHTTPStubs */,
-				0CABE703B9B9CEB61C02883B717F30AB /* Pods-GooglePlacesAutocompleteExampleTests */,
+				4D2FB1F029DE25C9938F468997C48C44 /* FBSnapshotTestCase */,
+				B9F753D23B3A010D0E2EB0AE0405D595 /* OHHTTPStubs */,
+				FD44B880A659A24DAD8487A085CA76D6 /* Pods-GooglePlacesAutocompleteExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0C5D4BD5C432D6D96480E4906C9D6C1A /* Sources */ = {
+		356BC8B441C56ABF5D2ADF9CE1B35CA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB1CEE161F2EB83C0A4058AF584D4388 /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m in Sources */,
+				B29A7FAB531108A95C24E8399E6BD131 /* FBSnapshotTestCase-dummy.m in Sources */,
+				5AB282B2D51EB48401D7C49C34966AC4 /* FBSnapshotTestCase.m in Sources */,
+				69A68048D65878897598D92851C0288D /* FBSnapshotTestController.m in Sources */,
+				6A19F46926C0533EF3FB292EFF850F74 /* UIImage+Compare.m in Sources */,
+				8DBC3ACF0577ECF0FCFC7E6050FF57BB /* UIImage+Diff.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		994DFEA1E4C0EC0E50027B1E94CDA2EA /* Sources */ = {
+		79A6F07414E4CA3A22DFA1E74787A8C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E1D382EBCB4082A5D630604757BD95 /* FBSnapshotTestCase-dummy.m in Sources */,
-				EAD63CDBA062B41776F64B8351B6300A /* FBSnapshotTestCase.m in Sources */,
-				AA6C4802ECA51DFBC185273B61AED844 /* FBSnapshotTestController.m in Sources */,
-				529F3D91DED232A8F95546828C790AA8 /* UIImage+Compare.m in Sources */,
-				CB168CCAB931FAC2A9F09DD65E263000 /* UIImage+Diff.m in Sources */,
+				33CF8828DAEF041D4B239FE98C91AD3E /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */,
+				623FD70CADFD4593E65178BBAD28298E /* OHHTTPStubs-dummy.m in Sources */,
+				E8E7CCF090EC2EB4E3C29D2954D21F17 /* OHHTTPStubs.m in Sources */,
+				F21D0F96BA6EDE58E4F70E83568E07D5 /* OHHTTPStubsResponse+JSON.m in Sources */,
+				C331F4CD251C22970EB86DCE1DF7F794 /* OHHTTPStubsResponse.m in Sources */,
+				6B1C00F3DED5CA430DAD920B385B2E33 /* OHPathHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF902DFDA00F3F2470703807B69F9646 /* Sources */ = {
+		D7B739D372B1EF284814BF9B6591A11D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7674634798781F2875E97E1D1F582668 /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */,
-				0BF718C7D4B6E3EF89449B051D388081 /* OHHTTPStubs-dummy.m in Sources */,
-				121A14AF2D721A555992A6D39753A8DF /* OHHTTPStubs.m in Sources */,
-				88F37F774EEA214747C9667FEC20EB8A /* OHHTTPStubsResponse+JSON.m in Sources */,
-				9EEBBD8A368DD31D2F4FC5AE982EAB1D /* OHHTTPStubsResponse.m in Sources */,
-				01C0C72108AAAD8134698337B69FCE74 /* OHPathHelpers.m in Sources */,
+				13C23BB59AE113C00770245F2682576B /* Pods-GooglePlacesAutocompleteExampleTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		820FF6D33563781B8032F3D3B3F21592 /* PBXTargetDependency */ = {
+		076C9DF7933DEA32864C090202BE27D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSnapshotTestCase;
-			target = 7743A4BEACB44A97967B4298BC2A1619 /* FBSnapshotTestCase */;
-			targetProxy = C52074A993800FE7AB818789E7599038 /* PBXContainerItemProxy */;
+			target = 4D2FB1F029DE25C9938F468997C48C44 /* FBSnapshotTestCase */;
+			targetProxy = CABBA39175EE6971E1B695BC86DD871C /* PBXContainerItemProxy */;
 		};
-		EFFEA9778FB9E4887CCF17D57D5975C1 /* PBXTargetDependency */ = {
+		7797B224295632F82C98B76110CC8C11 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OHHTTPStubs;
-			target = 5E558DBB1194A13611F0FED2998FFFF2 /* OHHTTPStubs */;
-			targetProxy = BE8D66ADAB0EA4F5E945102817C53466 /* PBXContainerItemProxy */;
+			target = B9F753D23B3A010D0E2EB0AE0405D595 /* OHHTTPStubs */;
+			targetProxy = 198C00B5A3A4C5C8435348A43E0664DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2896E6C5866F46E769DC345EBD2714C8 /* Debug */ = {
+		3883AB00CFA90222E7EAA0E5FD12C598 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EB7D081E5122416499B422AFAD7653A /* OHHTTPStubs.xcconfig */;
+			baseConfigurationReference = B3688CD1E84F6FAE6C895F221BF21BAB /* FBSnapshotTestCase.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FBSnapshotTestCase;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		438F0C5BB6C510671962B61392FACCFB /* Debug */ = {
+		3CCC54610D8BBE3E0B7DCE698D83AE11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2158774FA44C04B828E62F1744E57829 /* Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig */;
+			baseConfigurationReference = AF3BC5BAAD81407D883A23A84A6E24BE /* OHHTTPStubs.xcconfig */;
 			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		6299A24AB77C79186F8F38836CAF1BC3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EB7D081E5122416499B422AFAD7653A /* OHHTTPStubs.xcconfig */;
-			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OHHTTPStubs/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OHHTTPStubs;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		763263D3E18B83CFBE85485A80410544 /* Release */ = {
+		977988FEAA0324170DBA8149B55278D6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7020BF6C2190D6C1D41215F59ACE8634 /* Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig */;
+			baseConfigurationReference = 6984272489AD368EACAFE27E78529156 /* Pods-GooglePlacesAutocompleteExampleTests.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GooglePlacesAutocompleteExampleTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GooglePlacesAutocompleteExampleTests/Pods-GooglePlacesAutocompleteExampleTests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_GooglePlacesAutocompleteExampleTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -546,37 +598,89 @@
 			};
 			name = Debug;
 		};
-		BA6625647B9BD481FB1DDC7A57F14BA8 /* Release */ = {
+		C4F33D64EF5B9D08A9A40188EED46654 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2A73E6034AC4D3F62B1ACEC7B408503 /* FBSnapshotTestCase.xcconfig */;
+			baseConfigurationReference = 9937FF7184914E177B39F7EE3B59DB28 /* Pods-GooglePlacesAutocompleteExampleTests.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-GooglePlacesAutocompleteExampleTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		F26F47CC864411708E38519B624B921C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2A73E6034AC4D3F62B1ACEC7B408503 /* FBSnapshotTestCase.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GooglePlacesAutocompleteExampleTests/Pods-GooglePlacesAutocompleteExampleTests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_GooglePlacesAutocompleteExampleTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		C7B30ECE4A76D9E95B6C7063F1EC2054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF3BC5BAAD81407D883A23A84A6E24BE /* OHHTTPStubs.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OHHTTPStubs/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = OHHTTPStubs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D467119CFE62A0AF8C5ACB36A9F1A75D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3688CD1E84F6FAE6C895F221BF21BAB /* FBSnapshotTestCase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -615,24 +719,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		094F5720A07A08D87BF2B044498E2D68 /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2896E6C5866F46E769DC345EBD2714C8 /* Debug */,
-				6299A24AB77C79186F8F38836CAF1BC3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		13B9C41BF8645A679A01246358CA392C /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F26F47CC864411708E38519B624B921C /* Debug */,
-				BA6625647B9BD481FB1DDC7A57F14BA8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -642,11 +728,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D58000335AC7E18ECC68DDE8A15826A3 /* Build configuration list for PBXNativeTarget "Pods-GooglePlacesAutocompleteExampleTests" */ = {
+		420F3F5BAB27684807225A6256CD3B4D /* Build configuration list for PBXNativeTarget "Pods-GooglePlacesAutocompleteExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				438F0C5BB6C510671962B61392FACCFB /* Debug */,
-				763263D3E18B83CFBE85485A80410544 /* Release */,
+				C4F33D64EF5B9D08A9A40188EED46654 /* Debug */,
+				977988FEAA0324170DBA8149B55278D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59E707697B67013998417CACCE5A4B24 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3883AB00CFA90222E7EAA0E5FD12C598 /* Debug */,
+				D467119CFE62A0AF8C5ACB36A9F1A75D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDD79B3459C7CC393C8CD0CE59B61FE3 /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7B30ECE4A76D9E95B6C7063F1EC2054 /* Debug */,
+				3CCC54610D8BBE3E0B7DCE698D83AE11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
