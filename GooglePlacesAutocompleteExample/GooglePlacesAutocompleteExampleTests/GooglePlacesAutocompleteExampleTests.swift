@@ -17,9 +17,7 @@ class GooglePlacesAutocompleteTests: FBSnapshotTestCase, GooglePlacesAutocomplet
   let gpaViewController = GooglePlacesAutocomplete(apiKey: "APIKEY")
   var expectation: XCTestExpectation!
 
-  // TODO: This test was failing because the snapshot was out-of-date. Let's do something better instead :)
-  
-  func DISABLED_testGooglePlacesAutocomplete() {
+  func testGooglePlacesAutocomplete() {
     let json: [String : AnyObject] = ["predictions" : [prediction1, prediction2]]
     expectation = self.expectationWithDescription("Should return results")
 
@@ -36,7 +34,7 @@ class GooglePlacesAutocompleteTests: FBSnapshotTestCase, GooglePlacesAutocomplet
     let rootVC = UIApplication.sharedApplication().keyWindow!.rootViewController!
 
     rootVC.presentViewController(self.gpaViewController, animated: false, completion: {
-      
+
       self.snapshotVerifyView(self.gpaViewController.view, withIdentifier: "view")
 
       self.gpaViewController.gpaViewController.searchBar(
