@@ -1,24 +1,38 @@
 PODS:
-  - FBSnapshotTestCase (1.5)
-  - OHHTTPStubs (3.1.10):
-    - OHHTTPStubs/Core (= 3.1.10)
-  - OHHTTPStubs/Core (3.1.10)
+  - FBSnapshotTestCase (2.0.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.4)
+  - FBSnapshotTestCase/Core (2.0.4)
+  - FBSnapshotTestCase/SwiftSupport (2.0.4):
+    - FBSnapshotTestCase/Core
+  - OHHTTPStubs (4.3.0):
+    - OHHTTPStubs/Default (= 4.3.0)
+  - OHHTTPStubs/Core (4.3.0)
+  - OHHTTPStubs/Default (4.3.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (4.3.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (4.3.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (4.3.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (from `https://github.com/delannoyk/ios-snapshot-test-case`)
-  - OHHTTPStubs
+  - FBSnapshotTestCase (from `git@github.com:facebook/ios-snapshot-test-case.git`)
+  - OHHTTPStubs (~> 4.3)
 
 EXTERNAL SOURCES:
   FBSnapshotTestCase:
-    :git: https://github.com/delannoyk/ios-snapshot-test-case
+    :git: git@github.com:facebook/ios-snapshot-test-case.git
 
 CHECKOUT OPTIONS:
   FBSnapshotTestCase:
-    :commit: 4c31f3f97ecd3f8c0e8362b91a9c62eba23d9a54
-    :git: https://github.com/delannoyk/ios-snapshot-test-case
+    :commit: cf04b3036d08233654184eb533938336c57f39af
+    :git: git@github.com:facebook/ios-snapshot-test-case.git
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 07fe8883d469ec3ac2c5ce9559eccfb95adfbad5
-  OHHTTPStubs: 2038e929b6abb94881000524c1cb4aba0a1bb4a2
+  FBSnapshotTestCase: 6c9fe22920e7bc8a98b6b3703ba24cd5ba0978ce
+  OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.39.0

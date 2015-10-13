@@ -1,7 +1,7 @@
 require 'xcjobs'
 
 def destinations
-  [ 'name=iPhone 5s,OS=8.1' ]
+  [ 'name=iPhone 6s,OS=9.0' ]
 end
 
 XCJobs::Test.new('test') do |t|

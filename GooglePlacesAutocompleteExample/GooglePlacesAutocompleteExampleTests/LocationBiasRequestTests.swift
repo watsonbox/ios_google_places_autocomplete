@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 import GooglePlacesAutocomplete
+import OHHTTPStubs
 
 class LocationBiasRequestTests: XCTestCase, GooglePlacesAutocompleteDelegate {
   let gpaViewController = GooglePlacesAutocomplete(apiKey: "APIKEY")
