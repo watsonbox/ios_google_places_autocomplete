@@ -86,16 +86,18 @@ public class PlaceDetails: CustomStringConvertible {
   public let latitude: Double
   public let longitude: Double
   public let raw: [String: AnyObject]
-
+  public let fullAddress : String
+  
   public init(json: [String: AnyObject]) {
     let result = json["result"] as! [String: AnyObject]
     let geometry = result["geometry"] as! [String: AnyObject]
     let location = geometry["location"] as! [String: AnyObject]
-
+    
     self.name = result["name"] as! String
     self.latitude = location["lat"] as! Double
     self.longitude = location["lng"] as! Double
     self.raw = json
+    self.fullAddress = result["formatted_address"] as! String
   }
 
   public var description: String {
