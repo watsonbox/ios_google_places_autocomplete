@@ -22,7 +22,7 @@ No attempt has been made to integrate MapKit since displaying Google Places on a
 ## Requirements
 
 - iOS 7.0+
-- XCode 7.0+ / Swift 2.0
+- Xcode 7.0+ / Swift 2.0
 
 ## Installation
 
