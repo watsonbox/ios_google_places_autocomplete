@@ -333,8 +333,9 @@ class GooglePlacesRequestHelpers {
   }
 
   private class func escape(string: String) -> String {
-    let legalURLCharactersToBeEscaped: CFStringRef = ":/?&=;+!@#$()',*"
-    return CFURLCreateStringByAddingPercentEscapes(nil, string, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue) as String
+    let legalURLCharactersToBeEscaped: NSCharacterSet = NSCharacterSet(charactersInString: ":/?&=;+!@#$()',*")
+    
+    return NSString(string: string).stringByAddingPercentEncodingWithAllowedCharacters(legalURLCharactersToBeEscaped)! as String
   }
 
   private class func doRequest(url: String, params: [String: String], completion: (NSDictionary?,NSError?) -> ()) {
