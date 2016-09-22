@@ -3,6 +3,4 @@ framework module FBSnapshotTestCase {
 
   export *
   module * { export * }
-
-  private header "FBSnapshotTestController.h"
 }
