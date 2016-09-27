@@ -211,7 +211,7 @@
 					1EC16D801A8E1D0100E0760A = {
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					1EC16D8B1A8E1D0100E0760A = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -470,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C9957D8CE776E0DB9E64EF9 /* Pods-GooglePlacesAutocomplete.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
