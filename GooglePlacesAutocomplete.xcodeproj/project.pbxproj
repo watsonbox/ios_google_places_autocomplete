@@ -210,12 +210,12 @@
 				TargetAttributes = {
 					1EC16D801A8E1D0100E0760A = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = RVQAPUEW8Z;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					1EC16D8B1A8E1D0100E0760A = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = RVQAPUEW8Z;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -452,7 +452,7 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RVQAPUEW8Z;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -471,7 +471,7 @@
 			baseConfigurationReference = 4C9957D8CE776E0DB9E64EF9 /* Pods-GooglePlacesAutocomplete.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RVQAPUEW8Z;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -489,7 +489,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1DA54F50D7A883BC9E3CC9A /* Pods-GooglePlacesAutocompleteTests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = RVQAPUEW8Z;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -504,7 +504,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F65B84849795AD7A14C57187 /* Pods-GooglePlacesAutocompleteTests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = RVQAPUEW8Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GooglePlacesAutocompleteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
