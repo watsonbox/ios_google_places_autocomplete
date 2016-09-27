@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
+ruby ">=2.2.2"
 
 gem 'rake'
-gem 'cocoapods', '~> 0.39.0'
+gem 'cocoapods', '~> 1.0.1'
 gem 'xcpretty'
 gem 'xcjobs'
