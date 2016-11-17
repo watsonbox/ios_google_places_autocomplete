@@ -113,7 +113,7 @@ public class PlaceDetails: CustomStringConvertible {
 public class GooglePlacesAutocomplete: UINavigationController {
   public var gpaViewController: GooglePlacesAutocompleteContainer!
   public var closeButton: UIBarButtonItem!
-
+  
   // Proxy access to container navigationItem
   public override var navigationItem: UINavigationItem {
     get { return gpaViewController.navigationItem }
@@ -129,6 +129,11 @@ public class GooglePlacesAutocomplete: UINavigationController {
     set { gpaViewController.locationBias = newValue }
   }
 
+  public var extraParams: [String: String] {
+    get { return gpaViewController.extraParams }
+    set { gpaViewController.extraParams = newValue }
+  }
+  
   public convenience init(apiKey: String, placeType: PlaceType = .All) {
     let gpaViewController = GooglePlacesAutocompleteContainer(
       apiKey: apiKey,
@@ -166,6 +171,7 @@ public class GooglePlacesAutocompleteContainer: UIViewController {
   var places = [Place]()
   var placeType: PlaceType = .All
   var locationBias: LocationBias?
+  var extraParams = [String: String]()
 
   convenience init(apiKey: String, placeType: PlaceType = .All) {
     let bundle = NSBundle(forClass: GooglePlacesAutocompleteContainer.self)
@@ -259,6 +265,10 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
       "types": placeType.description,
       "key": apiKey ?? ""
     ]
+    
+    for (key, value) in extraParams {
+      params[key] = value
+    }
     
     if let bias = locationBias {
       params["location"] = bias.location
