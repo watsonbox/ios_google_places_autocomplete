@@ -4,7 +4,7 @@ OHHTTPStubs
 [![Platform](http://cocoapod-badges.herokuapp.com/p/OHHTTPStubs/badge.png)](http://cocoadocs.org/docsets/OHHTTPStubs)
 [![Version](http://cocoapod-badges.herokuapp.com/v/OHHTTPStubs/badge.png)](http://cocoadocs.org/docsets/OHHTTPStubs)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Build Status](https://travis-ci.org/AliSoftware/OHHTTPStubs.png?branch=master)](https://travis-ci.org/AliSoftware/OHHTTPStubs)
+[![Build Status](https://travis-ci.org/AliSoftware/OHHTTPStubs.svg?branch=master)](https://travis-ci.org/AliSoftware/OHHTTPStubs)
 
 `OHHTTPStubs` is a library designed to stub your network requests very easily. It can help you:
 
@@ -53,7 +53,10 @@ stub(isHost("mywebservice.com")) { _ in
 }
 ```
 
-Note: Using `OHHTTPStubsSwift.swift` you could also compose the matcher functions like this: `stub(isScheme("http") && isHost("myhost")) { … }`
+##### Notes 
+
+* Using `OHHTTPStubsSwift.swift` you could also compose the matcher functions like this: `stub(isScheme("http") && isHost("myhost")) { … }`
+* The response files used above can be recorded with tools like [SWHttpTrafficRecorder](https://github.com/capitalone/SWHttpTrafficRecorder). It can record all three formats that are supported by `OHHTTPStubs`, that is, HTTPMessage, response boby/content file, and Mocktail.  
 
 ## More examples & Help Topics
     

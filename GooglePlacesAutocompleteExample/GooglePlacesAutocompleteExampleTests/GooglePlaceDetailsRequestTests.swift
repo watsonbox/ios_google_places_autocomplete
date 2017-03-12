@@ -33,12 +33,12 @@ class GooglePlaceDetailsRequestTests: XCTestCase {
 
   func testSuccessfulDetailsRequest() {
     let place = Place(prediction: ["place_id": "691b237b0322f28988f3ce03e321ff72a12167fd", "description": "Paris, France"], apiKey: "APIKEY")
-    let expectation = self.expectationWithDescription("Should return details")
+    let expectation = self.expectation(description: "Should return details")
 
-    OHHTTPStubs.stubRequestsPassingTest({ (request: NSURLRequest!) -> Bool in
-      return request.URL!.absoluteString == "https://maps.googleapis.com/maps/api/place/details/json?key=APIKEY&placeid=\(place.id)"
-      }, withStubResponse: { (request: NSURLRequest!) -> OHHTTPStubsResponse in
-        return OHHTTPStubsResponse(JSONObject: self.json, statusCode: 200, headers: nil)
+    OHHTTPStubs.stubRequests(passingTest: { (request: URLRequest!) -> Bool in
+      return request.url!.absoluteString == "https://maps.googleapis.com/maps/api/place/details/json?key=APIKEY&placeid=\(place.id)"
+      }, withStubResponse: { (request: URLRequest!) -> OHHTTPStubsResponse in
+        return OHHTTPStubsResponse(jsonObject: self.json, statusCode: 200, headers: nil)
     })
 
     place.getDetails { details in
@@ -49,6 +49,6 @@ class GooglePlaceDetailsRequestTests: XCTestCase {
       expectation.fulfill()
     }
 
-    self.waitForExpectationsWithTimeout(2.0, handler: nil)
+    self.waitForExpectations(timeout: 2.0, handler: nil)
   }
 }
