@@ -27,7 +27,8 @@
 #pragma mark - Imports
 
 #import <Foundation/Foundation.h>
-#import <OHHTTPStubs/Compatibility.h>
+
+#import "Compatibility.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Defines & Constants
@@ -138,6 +139,22 @@ NS_ASSUME_NONNULL_BEGIN
                            statusCode:(int)statusCode
                               headers:(nullable NSDictionary*)httpHeaders;
 
+
+/**
+ *  Builds a response given a URL, the status code, and headers.
+ *
+ *  @param fileURL     The URL for the data to return in the response
+ *  @param statusCode  The HTTP Status Code to use in the response
+ *  @param httpHeaders The HTTP Headers to return in the response
+ *
+ *  @return An `OHHTTPStubsResponse` describing the corresponding response to return by the stub
+ *
+ *  @note This method applies only to URLs that represent file system resources
+ */
++(instancetype)responseWithFileURL:(NSURL *)fileURL
+                        statusCode:(int)statusCode
+                           headers:(nullable NSDictionary *)httpHeaders;
+
 /* -------------------------------------------------------------------------- */
 #pragma mark > Building an error response
 
@@ -160,7 +177,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Set the `responseTime` of the `OHHTTPStubsResponse` and return `self`. Useful for chaining method calls.
  *
  *  _Usage example:_
- *  <pre>return [[OHHTTPStubsReponse responseWithData:data statusCode:200 headers:nil] responseTime:5.0];</pre>
+ *  <pre>return [[OHHTTPStubsResponse responseWithData:data statusCode:200 headers:nil] responseTime:5.0];</pre>
  *
  *  @param responseTime If positive, the amount of time used to send the entire response.
  *                     If negative, the rate in KB/s at which to send the response data.
@@ -177,7 +194,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Useful for chaining method calls.
  *
  *  _Usage example:_
- *  <pre>return [[OHHTTPStubsReponse responseWithData:data statusCode:200 headers:nil]
+ *  <pre>return [[OHHTTPStubsResponse responseWithData:data statusCode:200 headers:nil]
  *            requestTime:1.0 responseTime:5.0];</pre>
  *
  *  @param requestTime The time to wait before the response begins to send. This value must be greater than or equal to zero.
@@ -238,6 +255,21 @@ NS_ASSUME_NONNULL_BEGIN
                        statusCode:(int)statusCode
                           headers:(nullable NSDictionary*)httpHeaders;
 
+
+/**
+ *  Initialize a response with a given URL, statusCode and headers.
+ *
+ *  @param fileURL     The URL for the data to return in the response
+ *  @param statusCode  The HTTP Status Code to use in the response
+ *  @param httpHeaders The HTTP Headers to return in the response
+ *
+ *  @return An `OHHTTPStubsResponse` describing the corresponding response to return by the stub
+ *
+ *  @note This method applies only to URLs that represent file system resources
+ */
+-(instancetype)initWithFileURL:(NSURL *)fileURL
+                    statusCode:(int)statusCode
+                       headers:(nullable NSDictionary *)httpHeaders;
 
 /**
  *  Initialize a response with the given data, statusCode and headers.
