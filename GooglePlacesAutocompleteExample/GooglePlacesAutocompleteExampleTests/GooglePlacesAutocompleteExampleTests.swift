@@ -51,7 +51,7 @@ class GooglePlacesAutocompleteTests: FBSnapshotTestCase, GooglePlacesAutocomplet
   }
 
   let prediction1: [String : Any] = [
-    "description" : "Paris, France" as Any,
+    "description" : "Paris, France",
     "id" : "691b237b0322f28988f3ce03e321ff72a12167fd",
     "matched_substrings" : [
       ["length" : 5, "offset" : 0]
