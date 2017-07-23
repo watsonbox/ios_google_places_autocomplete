@@ -27,31 +27,31 @@ public struct LocationBias {
 }
 
 public enum PlaceType: CustomStringConvertible {
-  case All
-  case Geocode
-  case Address
-  case Establishment
-  case Regions
-  case Cities
+  case all
+  case geocode
+  case address
+  case establishment
+  case regions
+  case cities
 
   public var description : String {
     switch self {
-      case .All: return ""
-      case .Geocode: return "geocode"
-      case .Address: return "address"
-      case .Establishment: return "establishment"
-      case .Regions: return "(regions)"
-      case .Cities: return "(cities)"
+      case .all: return ""
+      case .geocode: return "geocode"
+      case .address: return "address"
+      case .establishment: return "establishment"
+      case .regions: return "(regions)"
+      case .cities: return "(cities)"
     }
   }
 }
 
-public class Place: NSObject {
-  public let id: String
-  public let desc: String
-  public var apiKey: String?
+open class Place: NSObject {
+  open let id: String
+  open let desc: String
+  open var apiKey: String?
 
-  override public var description: String {
+  override open var description: String {
     get { return desc }
   }
 
@@ -76,16 +76,16 @@ public class Place: NSObject {
   
     - parameter result: Callback on successful completion with detailed place information
   */
-  public func getDetails(result: PlaceDetails -> ()) {
+  open func getDetails(_ result: @escaping (PlaceDetails) -> ()) {
     GooglePlaceDetailsRequest(place: self).request(result)
   }
 }
 
-public class PlaceDetails: CustomStringConvertible {
-  public let name: String
-  public let latitude: Double
-  public let longitude: Double
-  public let raw: [String: AnyObject]
+open class PlaceDetails: CustomStringConvertible {
+  open let name: String
+  open let latitude: Double
+  open let longitude: Double
+  open let raw: [String: AnyObject]
 
   public init(json: [String: AnyObject]) {
     let result = json["result"] as! [String: AnyObject]
@@ -98,38 +98,38 @@ public class PlaceDetails: CustomStringConvertible {
     self.raw = json
   }
 
-  public var description: String {
+  open var description: String {
     return "PlaceDetails: \(name) (\(latitude), \(longitude))"
   }
 }
 
 @objc public protocol GooglePlacesAutocompleteDelegate {
-  optional func placesFound(places: [Place])
-  optional func placeSelected(place: Place)
-  optional func placeViewClosed()
+  @objc optional func placesFound(_ places: [Place])
+  @objc optional func placeSelected(_ place: Place)
+  @objc optional func placeViewClosed()
 }
 
 // MARK: - GooglePlacesAutocomplete
-public class GooglePlacesAutocomplete: UINavigationController {
-  public var gpaViewController: GooglePlacesAutocompleteContainer!
-  public var closeButton: UIBarButtonItem!
+open class GooglePlacesAutocomplete: UINavigationController {
+  open var gpaViewController: GooglePlacesAutocompleteContainer!
+  open var closeButton: UIBarButtonItem!
 
   // Proxy access to container navigationItem
-  public override var navigationItem: UINavigationItem {
+  open override var navigationItem: UINavigationItem {
     get { return gpaViewController.navigationItem }
   }
 
-  public var placeDelegate: GooglePlacesAutocompleteDelegate? {
+  open var placeDelegate: GooglePlacesAutocompleteDelegate? {
     get { return gpaViewController.delegate }
     set { gpaViewController.delegate = newValue }
   }
   
-  public var locationBias: LocationBias? {
+  open var locationBias: LocationBias? {
     get { return gpaViewController.locationBias }
     set { gpaViewController.locationBias = newValue }
   }
 
-  public convenience init(apiKey: String, placeType: PlaceType = .All) {
+  public convenience init(apiKey: String, placeType: PlaceType = .all) {
     let gpaViewController = GooglePlacesAutocompleteContainer(
       apiKey: apiKey,
       placeType: placeType
@@ -138,8 +138,8 @@ public class GooglePlacesAutocomplete: UINavigationController {
     self.init(rootViewController: gpaViewController)
     self.gpaViewController = gpaViewController
 
-    closeButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop, target: self, action: "close")
-    closeButton.style = UIBarButtonItemStyle.Done
+    closeButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.stop, target: self, action: #selector(GooglePlacesAutocomplete.close))
+    closeButton.style = UIBarButtonItemStyle.done
 
     gpaViewController.navigationItem.leftBarButtonItem = closeButton
     gpaViewController.navigationItem.title = "Enter Address"
@@ -149,26 +149,26 @@ public class GooglePlacesAutocomplete: UINavigationController {
     placeDelegate?.placeViewClosed?()
   }
 
-  public func reset() {
+  open func reset() {
     gpaViewController.searchBar.text = ""
     gpaViewController.searchBar(gpaViewController.searchBar, textDidChange: "")
   }
 }
 
 // MARK: - GooglePlacesAutocompleteContainer
-public class GooglePlacesAutocompleteContainer: UIViewController {
-  @IBOutlet public weak var searchBar: UISearchBar!
+open class GooglePlacesAutocompleteContainer: UIViewController {
+  @IBOutlet open weak var searchBar: UISearchBar!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var topConstraint: NSLayoutConstraint!
 
   var delegate: GooglePlacesAutocompleteDelegate?
   var apiKey: String?
   var places = [Place]()
-  var placeType: PlaceType = .All
+  var placeType: PlaceType = .all
   var locationBias: LocationBias?
 
-  convenience init(apiKey: String, placeType: PlaceType = .All) {
-    let bundle = NSBundle(forClass: GooglePlacesAutocompleteContainer.self)
+  convenience init(apiKey: String, placeType: PlaceType = .all) {
+    let bundle = Bundle(for: GooglePlacesAutocompleteContainer.self)
 
     self.init(nibName: "GooglePlacesAutocomplete", bundle: bundle)
     self.apiKey = apiKey
@@ -176,27 +176,27 @@ public class GooglePlacesAutocompleteContainer: UIViewController {
   }
 
   deinit {
-    NSNotificationCenter.defaultCenter().removeObserver(self)
+    NotificationCenter.default.removeObserver(self)
   }
 
-  override public func viewWillLayoutSubviews() {
+  override open func viewWillLayoutSubviews() {
     topConstraint.constant = topLayoutGuide.length
   }
 
-  override public func viewDidLoad() {
+  override open func viewDidLoad() {
     super.viewDidLoad()
 
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown:", name: UIKeyboardDidShowNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillBeHidden:", name: UIKeyboardWillHideNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(GooglePlacesAutocompleteContainer.keyboardWasShown(_:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(GooglePlacesAutocompleteContainer.keyboardWillBeHidden(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
     searchBar.becomeFirstResponder()
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
   }
 
-  func keyboardWasShown(notification: NSNotification) {
-    if isViewLoaded() && view.window != nil {
+  func keyboardWasShown(_ notification: Notification) {
+    if isViewLoaded && view.window != nil {
       let info: Dictionary = notification.userInfo!
-      let keyboardSize: CGSize = (info[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue.size)!
+      let keyboardSize: CGSize = ((info[UIKeyboardFrameBeginUserInfoKey] as AnyObject).cgRectValue.size)
       let contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
 
       tableView.contentInset = contentInsets;
@@ -204,44 +204,44 @@ public class GooglePlacesAutocompleteContainer: UIViewController {
     }
   }
 
-  func keyboardWillBeHidden(notification: NSNotification) {
-    if isViewLoaded() && view.window != nil {
-      self.tableView.contentInset = UIEdgeInsetsZero
-      self.tableView.scrollIndicatorInsets = UIEdgeInsetsZero
+  func keyboardWillBeHidden(_ notification: Notification) {
+    if isViewLoaded && view.window != nil {
+      self.tableView.contentInset = UIEdgeInsets.zero
+      self.tableView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
   }
 }
 
 // MARK: - GooglePlacesAutocompleteContainer (UITableViewDataSource / UITableViewDelegate)
 extension GooglePlacesAutocompleteContainer: UITableViewDataSource, UITableViewDelegate {
-  public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return places.count
   }
 
-  public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) 
+  public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) 
 
     // Get the corresponding candy from our candies array
     let place = self.places[indexPath.row]
 
     // Configure the cell
     cell.textLabel!.text = place.description
-    cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+    cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
     
     return cell
   }
 
-  public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     delegate?.placeSelected?(self.places[indexPath.row])
   }
 }
 
 // MARK: - GooglePlacesAutocompleteContainer (UISearchBarDelegate)
 extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
-  public func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+  public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     if (searchText == "") {
       self.places = []
-      tableView.hidden = true
+      tableView.isHidden = true
     } else {
       getPlaces(searchText)
     }
@@ -253,7 +253,7 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
     - parameter searchString: The search query
   */
   
-  private func getPlaces(searchString: String) {
+  fileprivate func getPlaces(_ searchString: String) {
     var params = [
       "input": searchString,
       "types": placeType.description,
@@ -279,7 +279,7 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
               return Place(prediction: prediction, apiKey: self.apiKey)
             }
           self.tableView.reloadData()
-          self.tableView.hidden = false
+          self.tableView.isHidden = false
           self.delegate?.placesFound?(self.places)
         }
       }
@@ -295,7 +295,7 @@ class GooglePlaceDetailsRequest {
     self.place = place
   }
 
-  func request(result: PlaceDetails -> ()) {
+  func request(_ result: @escaping (PlaceDetails) -> ()) {
     GooglePlacesRequestHelpers.doRequest(
       "https://maps.googleapis.com/maps/api/place/details/json",
       params: [
@@ -322,40 +322,40 @@ class GooglePlacesRequestHelpers {
   - parameter parameters: Dictionary of query string parameters
   - returns: The properly escaped query string
   */
-  private class func query(parameters: [String: AnyObject]) -> String {
+  fileprivate class func query(_ parameters: [String: AnyObject]) -> String {
     var components: [(String, String)] = []
-    for key in Array(parameters.keys).sort(<) {
+    for key in Array(parameters.keys).sorted(by: <) {
       let value: AnyObject! = parameters[key]
-      components += [(escape(key), escape("\(value)"))]
+      components += [(escape(key), escape("\(value!)"))]
     }
 
-    return (components.map{"\($0)=\($1)"} as [String]).joinWithSeparator("&")
+    return (components.map{"\($0)=\($1)"} as [String]).joined(separator: "&")
   }
 
-  private class func escape(string: String) -> String {
-    let legalURLCharactersToBeEscaped: CFStringRef = ":/?&=;+!@#$()',*"
-    return CFURLCreateStringByAddingPercentEscapes(nil, string, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue) as String
+  fileprivate class func escape(_ string: String) -> String {
+    let legalURLCharactersToBeEscaped: CFString = ":/?&=;+!@#$()',*" as CFString
+    return CFURLCreateStringByAddingPercentEscapes(nil, string as CFString, nil, legalURLCharactersToBeEscaped, CFStringBuiltInEncodings.UTF8.rawValue) as String
   }
 
-  private class func doRequest(url: String, params: [String: String], completion: (NSDictionary?,NSError?) -> ()) {
-    let request = NSMutableURLRequest(
-      URL: NSURL(string: "\(url)?\(query(params))")!
+  fileprivate class func doRequest(_ url: String, params: [String: String], completion: @escaping (NSDictionary?,NSError?) -> ()) {
+    let request = URLRequest(
+      url: URL(string: "\(url)?\(query(params as [String : AnyObject]))")!
     )
 
-    let session = NSURLSession.sharedSession()
-    let task = session.dataTaskWithRequest(request) { data, response, error in
-      self.handleResponse(data, response: response as? NSHTTPURLResponse, error: error, completion: completion)
-    }
+    let session = URLSession.shared
+    let task = session.dataTask(with: request, completionHandler: { data, response, error in
+      self.handleResponse(data, response: response as! HTTPURLResponse , error: error as NSError?, completion: completion)
+    })
 
     task.resume()
   }
 
-  private class func handleResponse(data: NSData!, response: NSHTTPURLResponse!, error: NSError!, completion: (NSDictionary?, NSError?) -> ()) {
+  fileprivate class func handleResponse(_ data: Data!, response: HTTPURLResponse!, error: NSError?, completion: @escaping (NSDictionary?, NSError?) -> ()) {
     
     // Always return on the main thread...
     let done: ((NSDictionary?, NSError?) -> Void) = {(json, error) in
-        dispatch_async(dispatch_get_main_queue(), {
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        DispatchQueue.main.async(execute: {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             completion(json,error)
         })
     }
@@ -382,9 +382,9 @@ class GooglePlacesRequestHelpers {
     
     let json: NSDictionary?
     do {
-      json = try NSJSONSerialization.JSONObjectWithData(
-        data,
-        options: NSJSONReadingOptions.MutableContainers) as? NSDictionary
+      json = try JSONSerialization.jsonObject(
+        with: data,
+        options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
     } catch {
       print("Serialisation error")
       let serialisationError = NSError(domain: ErrorDomain, code: 1002, userInfo: [NSLocalizedDescriptionKey:"Serialization error"])

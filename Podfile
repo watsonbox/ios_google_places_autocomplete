@@ -22,5 +22,5 @@ target 'GooglePlacesAutocompleteExampleTests' do
   xcodeproj 'GooglePlacesAutocompleteExample/GooglePlacesAutocompleteExample.xcodeproj'
 
   pod 'OHHTTPStubs', '~> 4.3'
-  pod 'FBSnapshotTestCase', git: "git@github.com:facebook/ios-snapshot-test-case.git"
+  pod 'FBSnapshotTestCase', git: "https://github.com/varun-naharia/ios-snapshot-test-case.git"
 end
