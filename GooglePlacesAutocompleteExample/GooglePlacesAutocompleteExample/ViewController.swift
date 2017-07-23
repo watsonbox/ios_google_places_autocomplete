@@ -11,7 +11,7 @@ import GooglePlacesAutocomplete
 
 class ViewController: UIViewController {
   let gpaViewController = GooglePlacesAutocomplete(
-    apiKey: "AIzaSyDUa_LZCLA1YE5V2kN4VIe3a8RKKM3oDjs",
+    apiKey: "[YOUR GOOGLE PLACES API KEY]",
     placeType: .all
   )
 
