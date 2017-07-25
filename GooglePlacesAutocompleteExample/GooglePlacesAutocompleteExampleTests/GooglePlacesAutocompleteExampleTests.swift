@@ -14,7 +14,7 @@ import FBSnapshotTestCase
 import OHHTTPStubs
 
 class GooglePlacesAutocompleteTests: FBSnapshotTestCase, GooglePlacesAutocompleteDelegate {
-  let gpaViewController = GooglePlacesAutocomplete(apiKey: "APIKEY")
+  let gpaViewController = GooglePlacesAutocomplete(apiKey: "APIKEY", extraParam:nil)
   var expectation: XCTestExpectation!
 
   func testGooglePlacesAutocomplete() {

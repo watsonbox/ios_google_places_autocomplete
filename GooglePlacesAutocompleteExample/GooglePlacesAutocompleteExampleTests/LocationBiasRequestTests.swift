@@ -12,7 +12,7 @@ import GooglePlacesAutocomplete
 import OHHTTPStubs
 
 class LocationBiasRequestTests: XCTestCase, GooglePlacesAutocompleteDelegate {
-  let gpaViewController = GooglePlacesAutocomplete(apiKey: "APIKEY")
+  let gpaViewController = GooglePlacesAutocomplete(apiKey: "APIKEY", extraParam:nil)
   var expectation: XCTestExpectation!
   
   func testLocationBiasRequest() {

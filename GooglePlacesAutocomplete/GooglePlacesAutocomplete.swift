@@ -129,10 +129,11 @@ open class GooglePlacesAutocomplete: UINavigationController {
     set { gpaViewController.locationBias = newValue }
   }
 
-  public convenience init(apiKey: String, placeType: PlaceType = .all) {
+  public convenience init(apiKey: String, placeType: PlaceType = .all, extraParam:[[String:Any]]?) {
     let gpaViewController = GooglePlacesAutocompleteContainer(
       apiKey: apiKey,
-      placeType: placeType
+      placeType: placeType,
+      extraParam:extraParam
     )
 
     self.init(rootViewController: gpaViewController)
@@ -166,13 +167,18 @@ open class GooglePlacesAutocompleteContainer: UIViewController {
   var places = [Place]()
   var placeType: PlaceType = .all
   var locationBias: LocationBias?
+  var extraParam:[[String:Any]] = []
 
-  convenience init(apiKey: String, placeType: PlaceType = .all) {
+  convenience init(apiKey: String, placeType: PlaceType = .all, extraParam:[[String:Any]]?) {
     let bundle = Bundle(for: GooglePlacesAutocompleteContainer.self)
 
     self.init(nibName: "GooglePlacesAutocomplete", bundle: bundle)
     self.apiKey = apiKey
     self.placeType = placeType
+    if(extraParam != nil)
+    {
+      self.extraParam = extraParam!
+    }
   }
 
   deinit {
@@ -259,6 +265,12 @@ extension GooglePlacesAutocompleteContainer: UISearchBarDelegate {
       "types": placeType.description,
       "key": apiKey ?? ""
     ]
+    if(extraParam.count > 0)
+    {
+      for item in extraParam {
+        params[item.keys.first!] = item.values.first as? String
+      }
+    }
     
     if let bias = locationBias {
       params["location"] = bias.location
