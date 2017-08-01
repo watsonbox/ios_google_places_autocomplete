@@ -129,11 +129,12 @@ open class GooglePlacesAutocomplete: UINavigationController {
     set { gpaViewController.locationBias = newValue }
   }
 
-  public convenience init(apiKey: String, placeType: PlaceType = .all, extraParam:[[String:Any]]?) {
+    public convenience init(apiKey: String, placeType: PlaceType = .all, extraParam:[[String:Any]]?, searchTitle:String?) {
     let gpaViewController = GooglePlacesAutocompleteContainer(
       apiKey: apiKey,
       placeType: placeType,
-      extraParam:extraParam
+      extraParam:extraParam,
+      searchTitle:searchTitle
     )
 
     self.init(rootViewController: gpaViewController)
@@ -143,7 +144,7 @@ open class GooglePlacesAutocomplete: UINavigationController {
     closeButton.style = UIBarButtonItemStyle.done
 
     gpaViewController.navigationItem.leftBarButtonItem = closeButton
-    gpaViewController.navigationItem.title = "Enter Address"
+    gpaViewController.navigationItem.title = searchTitle
   }
 
   func close() {
@@ -168,8 +169,8 @@ open class GooglePlacesAutocompleteContainer: UIViewController {
   var placeType: PlaceType = .all
   var locationBias: LocationBias?
   var extraParam:[[String:Any]] = []
-
-  convenience init(apiKey: String, placeType: PlaceType = .all, extraParam:[[String:Any]]?) {
+  var searchTitle:String = "Enter Address"
+    convenience init(apiKey: String, placeType: PlaceType = .all, extraParam:[[String:Any]]?, searchTitle:String?) {
     let bundle = Bundle(for: GooglePlacesAutocompleteContainer.self)
 
     self.init(nibName: "GooglePlacesAutocomplete", bundle: bundle)
