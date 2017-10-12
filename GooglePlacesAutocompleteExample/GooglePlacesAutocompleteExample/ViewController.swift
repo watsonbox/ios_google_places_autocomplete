@@ -11,21 +11,22 @@ import GooglePlacesAutocomplete
 
 class ViewController: UIViewController {
   let gpaViewController = GooglePlacesAutocomplete(
-    apiKey: "[YOUR GOOGLE PLACES API KEY]",
-    placeType: .Address
+    apiKey: "AIzaSyDUa_LZCLA1YE5V2kN4VIe3a8RKKM3oDjs",
+    placeType: .all,
+    extraParam: [["components":"country:in"]]
   )
 
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
     gpaViewController.placeDelegate = self
 
-    presentViewController(gpaViewController, animated: true, completion: nil)
+    present(gpaViewController, animated: true, completion: nil)
   }
 }
 
 extension ViewController: GooglePlacesAutocompleteDelegate {
-  func placeSelected(place: Place) {
+  func placeSelected(_ place: Place) {
     print(place.description)
 
     place.getDetails { details in
@@ -34,6 +35,6 @@ extension ViewController: GooglePlacesAutocompleteDelegate {
   }
 
   func placeViewClosed() {
-    dismissViewControllerAnimated(true, completion: nil)
+    dismiss(animated: true, completion: nil)
   }
 }
