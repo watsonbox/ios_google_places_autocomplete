@@ -18,22 +18,22 @@ class GooglePlacesAutocompleteTests: FBSnapshotTestCase, GooglePlacesAutocomplet
   var expectation: XCTestExpectation!
 
   func testGooglePlacesAutocomplete() {
-    let json: [String : AnyObject] = ["predictions" : [prediction1, prediction2]]
-    expectation = self.expectationWithDescription("Should return results")
+    let json: [String : Any] = ["predictions" : [prediction1, prediction2]]
+    expectation = self.expectation(description: "Should return results")
 
-    OHHTTPStubs.stubRequestsPassingTest({ (request: NSURLRequest!) -> Bool in
-      return request.URL!.absoluteString == "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Paris&key=APIKEY&types="
-      }, withStubResponse: { (request: NSURLRequest!) -> OHHTTPStubsResponse in
-        return OHHTTPStubsResponse(JSONObject: json, statusCode: 200, headers: nil)
+    OHHTTPStubs.stubRequests(passingTest: { (request: URLRequest!) -> Bool in
+      return request.url!.absoluteString == "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Paris&key=APIKEY&types="
+      }, withStubResponse: { (request: URLRequest!) -> OHHTTPStubsResponse in
+        return OHHTTPStubsResponse(jsonObject: json, statusCode: 200, headers: nil)
     })
 
     self.gpaViewController.placeDelegate = self
 
-    UIApplication.sharedApplication().keyWindow!.rootViewController = UIViewController()
+    UIApplication.shared.keyWindow!.rootViewController = UIViewController()
 
-    let rootVC = UIApplication.sharedApplication().keyWindow!.rootViewController!
+    let rootVC = UIApplication.shared.keyWindow!.rootViewController!
 
-    rootVC.presentViewController(self.gpaViewController, animated: false, completion: {
+    rootVC.present(self.gpaViewController, animated: false, completion: {
       self.FBSnapshotVerifyView(self.gpaViewController.view, identifier: "view")
 
       self.gpaViewController.gpaViewController.searchBar(
@@ -42,17 +42,17 @@ class GooglePlacesAutocompleteTests: FBSnapshotTestCase, GooglePlacesAutocomplet
       )
     })
 
-    self.waitForExpectationsWithTimeout(2.0, handler: nil)
+    self.waitForExpectations(timeout: 2.0, handler: nil)
   }
 
-  func placesFound(places: [Place]) {
+  func placesFound(_ places: [Place]) {
     self.FBSnapshotVerifyView(self.gpaViewController.view, identifier: "search")
     expectation.fulfill()
   }
 
-  let prediction1: [String : AnyObject] = [
-    "description" : "Paris, France",
-    "id" : "691b237b0322f28988f3ce03e321ff72a12167fd",
+  let prediction1: [String : Any] = [
+    "description" : "Paris, France" as AnyObject,
+    "id" : "691b237b0322f28988f3ce03e321ff72a12167fd" as AnyObject,
     "matched_substrings" : [
       ["length" : 5, "offset" : 0]
     ],
@@ -65,9 +65,9 @@ class GooglePlacesAutocompleteTests: FBSnapshotTestCase, GooglePlacesAutocomplet
     "types" : [ "locality", "political", "geocode" ]
   ]
 
-  let prediction2: [String : AnyObject] = [
-    "description" : "Paris 17, Paris, France",
-    "id" : "126ccd7b36db3990466ee234998f25ab92ce88ac",
+  let prediction2: [String : Any] = [
+    "description" : "Paris 17, Paris, France" as AnyObject,
+    "id" : "126ccd7b36db3990466ee234998f25ab92ce88ac" as AnyObject,
     "matched_substrings" : [
       ["length" : 5, "offset" : 0]
     ],

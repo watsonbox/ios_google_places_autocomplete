@@ -16,13 +16,13 @@ class LocationBiasRequestTests: XCTestCase, GooglePlacesAutocompleteDelegate {
   var expectation: XCTestExpectation!
   
   func testLocationBiasRequest() {
-    expectation = self.expectationWithDescription("Should return biased results")
+    expectation = self.expectation(description: "Should return biased results")
     
-    OHHTTPStubs.stubRequestsPassingTest({ (request: NSURLRequest!) -> Bool in
-      return request.URL!.absoluteString == "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Paris&key=APIKEY&location=48.8534275%2C2.35827879999999&radius=1000&types="
-      }, withStubResponse: { (request: NSURLRequest!) -> OHHTTPStubsResponse in
+    OHHTTPStubs.stubRequests(passingTest: { (request: URLRequest!) -> Bool in
+      return request.url!.absoluteString == "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Paris&key=APIKEY&location=48.8534275%2C2.35827879999999&radius=1000&types="
+      }, withStubResponse: { (request: URLRequest!) -> OHHTTPStubsResponse in
         return OHHTTPStubsResponse(
-          JSONObject: ["predictions" : [[
+          jsonObject: ["predictions" : [[
             "description" : "Paris, France",
             "place_id" : "ChIJD7fiBh9u5kcRYJSMaMOCCwQ"
           ]]],
@@ -32,21 +32,21 @@ class LocationBiasRequestTests: XCTestCase, GooglePlacesAutocompleteDelegate {
     self.gpaViewController.placeDelegate = self
     self.gpaViewController.locationBias = LocationBias(latitude: 48.8534275, longitude: 2.3582787999999937, radius: 1000)
     
-    UIApplication.sharedApplication().keyWindow!.rootViewController = UIViewController()
+    UIApplication.shared.keyWindow!.rootViewController = UIViewController()
     
-    let rootVC = UIApplication.sharedApplication().keyWindow!.rootViewController!
+    let rootVC = UIApplication.shared.keyWindow!.rootViewController!
     
-    rootVC.presentViewController(self.gpaViewController, animated: false, completion: {
+    rootVC.present(self.gpaViewController, animated: false, completion: {
       self.gpaViewController.gpaViewController.searchBar(
         self.gpaViewController.gpaViewController.searchBar,
         textDidChange: "Paris"
       )
     })
     
-    self.waitForExpectationsWithTimeout(2.0, handler: nil)
+    self.waitForExpectations(timeout: 2.0, handler: nil)
   }
   
-  func placesFound(places: [Place]) {
+  func placesFound(_ places: [Place]) {
     expectation.fulfill()
   }
 }
