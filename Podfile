@@ -5,22 +5,28 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'GooglePlacesAutocomplete' do
-  xcodeproj 'GooglePlacesAutocomplete.xcodeproj'
+  project 'GooglePlacesAutocomplete.xcodeproj'
 end
 
 target 'GooglePlacesAutocompleteTests' do
-  xcodeproj 'GooglePlacesAutocomplete.xcodeproj'
-
+  project 'GooglePlacesAutocomplete.xcodeproj'
 end
 
 target 'GooglePlacesAutocompleteExample' do
-  xcodeproj 'GooglePlacesAutocompleteExample/GooglePlacesAutocompleteExample.xcodeproj'
-
+  project 'GooglePlacesAutocompleteExample/GooglePlacesAutocompleteExample.xcodeproj'
 end
 
 target 'GooglePlacesAutocompleteExampleTests' do
-  xcodeproj 'GooglePlacesAutocompleteExample/GooglePlacesAutocompleteExample.xcodeproj'
+  project 'GooglePlacesAutocompleteExample/GooglePlacesAutocompleteExample.xcodeproj'
 
   pod 'OHHTTPStubs', '~> 4.3'
-  pod 'FBSnapshotTestCase', git: "git@github.com:facebook/ios-snapshot-test-case.git"
+  pod 'FBSnapshotTestCase', :git => 'https://github.com/facebook/ios-snapshot-test-case.git', :branch => 'swift-beta-3'
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
 end

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GooglePlacesAutocompleteContainer" customModule="GooglePlacesAutocomplete" customModuleProvider="target">
@@ -14,33 +16,30 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoweredByGoogle" translatesAutoresizingMaskIntoConstraints="NO" id="DsE-yN-ypR">
-                    <rect key="frame" x="250" y="128" width="100" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="GaF-og-gpE"/>
                         <constraint firstAttribute="height" constant="30" id="OLH-hh-9Jb"/>
                     </constraints>
                 </imageView>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="24m-Y8-A7A">
-                    <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="BdS-J4-gJk"/>
                     </connections>
                 </searchBar>
                 <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6Gg-TX-rba">
-                    <rect key="frame" x="0.0" y="108" width="600" height="492"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="2Z4-Sz-bQ1"/>
                         <outlet property="delegate" destination="-1" id="Nw9-hn-mXr"/>
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="24m-Y8-A7A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="0qa-fT-QpK"/>
                 <constraint firstItem="6Gg-TX-rba" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1EL-lI-b3n"/>
