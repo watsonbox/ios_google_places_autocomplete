@@ -342,7 +342,7 @@ class GooglePlacesRequestHelpers {
     let session = URLSession.shared
     
     let task = session.dataTask(with: request) { (data:Data?, response:URLResponse?, error:Error?) in
-      self.handleResponse(data, response: response as! HTTPURLResponse, error: error, completion: completion)
+      self.handleResponse(data, response: response as? HTTPURLResponse, error: error, completion: completion)
     }
 
     task.resume()
